@@ -1,0 +1,7 @@
+{
+  "name": "Ojo de Tlaloc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
