@@ -1,0 +1,68 @@
+<ion-modal-view style="background-color: #000">
+
+  <md-toolbar class="principal-fondo-header">
+    <div class="md-toolbar-tools">
+      <md-button class="btn-back" ng-click="closeModalFiltersText()" aria-label="Settings">
+        <img src="images/menu/down.svg" class="toolbar-header-button-img"/>
+      </md-button>
+
+      <div class="let-input-transparent input-search-keys">
+        <input type="text" ng-model="search.text_" placeholder="Escribe una {{ text_placeholder }} o descripción a buscar" ng-keyup="search_key()">
+      </div>
+
+    </div>
+  </md-toolbar>
+
+  <ion-content scroll="true" class="padding-top-80 width-100-percentage height-100-percentage principal-fondo" delegate-handle="myScrollFilterText">
+
+    <div ng-show="active_search_keys === false && result_search_keys.length == 0" class="display-flex justify-content-center">
+      <div class="register-success-content">
+
+        <br><br>
+        <img src="images/icons/search-white.png" class="search-key-img float_anim"/>
+        <br><br>
+        <br>
+        <p ng-show="search.text_ === ''" class="register-success-sub color-white">
+          Escribe una {{ text_placeholder }} o descripción a buscar
+        </p>
+        <p ng-show="search.text_ !== ''" class="register-success-sub color-white">
+          La palabra <b class="color-amarillo">{{ search.text_ }}</b> no encontrada, por favor
+          escribe una <b class="color-naranja">{{ text_placeholder }}</b> o descripción a buscar
+        </p>
+
+      </div>
+    </div>
+    <div ng-show="active_search_keys === false && result_search_keys.length > 0">
+
+      <div ng-repeat="item in result_search_keys">
+        <md-divider></md-divider>
+
+        <md-list-item ng-click="selectedKey(item)">
+          <p class="font-base-regular custom-item-list color-white line-height-115-percentage">
+            {{ item.key }} -  {{ item.name }}
+          </p>
+          <img src="images/icons/next.png" class="width-24"/>
+        </md-list-item>
+
+        <md-divider></md-divider>
+      </div>
+
+    </div>
+
+    <div ng-show="active_search_keys === true" class="display-flex justify-content-center">
+      <div class="register-success-content">
+
+        <br><br>
+        <img src="images/icons/search-white.png" class="search-key-img float_anim"/>
+        <br><br>
+        <br>
+        <p class="register-success-sub color-white">
+          Buscando {{ search.text_ }}...
+        </p>
+
+      </div>
+    </div>
+
+  </ion-content>
+
+</ion-modal-view>

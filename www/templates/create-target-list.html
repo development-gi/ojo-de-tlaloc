@@ -1,0 +1,97 @@
+<ion-view class="background-default">
+
+  <!-- CONTENIDO -->
+  <ion-content class="edit-target-content" style="top: 57px;">
+
+    <!-- CARD: Información básica -->
+    <md-card class="form-card">
+      <md-card-content class="modal-card-content">
+        <label class="form-label">Nombre de la lista</label>
+        <input type="text"
+               class="form-input"
+               ng-model="targetData.lib_name"
+               placeholder="Nombre de la lista">
+        <label class="form-label">Tipo de lista</label>
+        <select class="form-select"
+                ng-model="targetData.lib_type">
+          <option value="" disabled>Selecciona</option>
+          <option ng-value="1">Lista de bloqueo</option>
+          <option ng-value="2">Lista de confianza</option>
+        </select>
+      </md-card-content>
+    </md-card>
+
+    <!-- CARD: Umbral -->
+    <md-card class="form-card">
+      <md-card-content class="modal-card-content">
+        <div class="form-row">
+          <label class="form-label">Umbral de confianza</label>
+          <span class="threshold-value">
+            {{ targetData.threshold }}%
+          </span>
+        </div>
+        <input type="range"
+               min="0"
+               max="100"
+               class="threshold-slider"
+               ng-model="targetData.threshold">
+      </md-card-content>
+    </md-card>
+
+    <!-- CARD: Alarmas -->
+    <md-card class="form-card">
+      <md-card-content class="modal-card-content">
+        <div class="alarm-switch-row">
+          <div class="alarm-text">
+            <label class="form-label">¿Generar alarmas?</label>
+
+            <span class="alarm-status"
+                  ng-class="targetData.lib_link_alarm == '1'
+                        ? 'status-on'
+                        : 'status-off'">
+          {{ targetData.lib_link_alarm == '1'
+              ? 'Activadas'
+              : 'Desactivadas' }}
+        </span>
+          </div>
+          <!-- TOGGLE -->
+          <div class="toggle-container">
+            <input type="checkbox"
+                   id="alarmToggle"
+                   class="toggle-checkbox"
+                   ng-model="targetData.lib_link_alarm"
+                   ng-true-value="'1'"
+                   ng-false-value="'0'">
+
+            <label for="alarmToggle"
+                   class="toggle-label"></label>
+          </div>
+        </div>
+      </md-card-content>
+    </md-card>
+
+    <!-- GUARDAR -->
+    <div class="save-container">
+      <button class="save-button"
+              ng-click="saveNewTarget()">
+        Crear lista
+      </button>
+    </div>
+
+  </ion-content>
+
+  <md-toolbar class="tlaloc-header">
+    <div class="md-toolbar-tools">
+      <!-- Botón izquierdo -->
+      <md-button class="md-icon-button"
+                 ng-click="return()"
+                 aria-label="Menu">
+        <img src="images/new/arrow-left.svg" class="toolbar-icon">
+      </md-button>
+      <!-- Título -->
+      <h2 class="toolbar-title-modules">Nueva lista
+      </h2>
+    </div>
+  </md-toolbar>
+
+</ion-view>

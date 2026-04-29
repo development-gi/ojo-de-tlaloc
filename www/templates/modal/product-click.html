@@ -1,0 +1,79 @@
+<ion-modal-view class="background-white">
+
+  <ion-content class="products-list-content" scroll="true">
+
+    <div class="container-catalog">
+      <div class="info-product">
+        <div class="select-image">
+          <img ng-src="{{URL_IMG + productSelect.avatar}}" src="{{URL_IMG + productSelect.avatar}}"
+               onerror="this.src='images/no-photo-2.png';" alt=""/>
+        </div>
+        <div class="select-product">
+          <div class="select-text bottom-space">{{ productSelect.name }}</div>
+          <div class="select-text bottom-space color-green-bold">{{ productSelect.barcode }}</div>
+          <div class="select-text bottom-space">{{ productSelect.category }}</div>
+        </div>
+      </div>
+      <br>
+
+      <div class="edit-input-container2">
+        <div class="input-stock">
+          <div class="text-input bottom-space">{{ "PRODUCT_CATALOG_LBL_10" | translate }}</div>
+          <md-input-container class="md-block border-color-base color-base margin-0" flex-gt-sm md-theme="alt">
+            <input class="height-input" type="tel" ng-model="productSelect.stock" maxlength="10" only-numbers>
+          </md-input-container>
+        </div>
+        <div class="input-list-price">
+          <div class="text-input bottom-space">{{ "PRODUCT_CATALOG_LBL_11" | translate }}</div>
+          <md-input-container class="md-block border-color-base color-base margin-0" flex-gt-sm md-theme="alt">
+            <input class="height-input" type="tel" ng-model="productSelect.list_price" maxlength="10" only-numbers>
+          </md-input-container>
+        </div>
+        <div class="input-price">
+          <div class="text-input bottom-space">{{ "PRODUCT_CATALOG_LBL_12" | translate }}</div>
+          <md-input-container class="md-block border-color-base color-base margin-0" flex-gt-sm md-theme="alt">
+            <input class="height-input" type="tel" ng-model="productSelect.price" maxlength="10" only-numbers>
+          </md-input-container>
+        </div>
+      </div>
+      <br>
+
+      <div class="edit-input-container2 bottom-space-div">
+        <div class="input-measure">
+          <div class="text-input bottom-space">{{ "PRODUCT_CATALOG_LBL_13" | translate }}</div>
+          <md-input-container class="md-block border-color-base color-base margin-0" flex-gt-sm md-theme="alt">
+            <input class="height-input" type="tel" ng-model="productSelect.measure" maxlength="10" only-numbers>
+          </md-input-container>
+        </div>
+        <div class="input-unit-measurement">
+          <div class="text-input">{{ "PRODUCT_CATALOG_LBL_14" | translate }}</div>
+          <div class="input-search-container custom-select">
+            <select class="catalog-select text-dark-default width-100-percentage" ng-model="productSelect.unit_measurement">
+              <option class="text-dark-default" value="gr">{{ "NEW_PRODUCT_LBL_33" | translate }}</option>
+              <option class="text-dark-default" value="kg">{{ "NEW_PRODUCT_LBL_38" | translate }}</option>
+              <option class="text-dark-default" value="mg">{{ "NEW_PRODUCT_LBL_34" | translate }}</option>
+              <option class="text-dark-default" value="l">{{ "NEW_PRODUCT_LBL_35" | translate }}</option>
+              <option class="text-dark-default" value="ml">{{ "NEW_PRODUCT_LBL_36" | translate }}</option>
+              <option class="text-dark-default" value="pz">{{ "NEW_PRODUCT_LBL_37" | translate }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog-list-bt">
+        <div class="catalog-button" ng-click="editProduct()">Editar</div>
+      </div>
+
+    </div>
+
+  </ion-content>
+
+  <md-button class="btn-back" ng-click="closeModalProductClick()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+  <div class="toolbar-header-title">
+    <h3>{{ "PRODUCT_CATALOG_LBL_4" | translate }}</h3>
+  </div>
+
+</ion-modal-view>

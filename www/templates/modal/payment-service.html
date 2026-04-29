@@ -1,0 +1,91 @@
+<ion-modal-view class="background-white">
+
+  <ion-content class="top-56" scroll="true">
+    <div class="mounts-container">
+      <div class="payment-data">
+        <div class="pd-image">
+          <img ng-if="dataRecharge.company == 'Telcel'" src="images/telcel.png" alt="Logo">
+          <img ng-if="dataRecharge.company == 'Movistar'" src="images/movistar.png" alt="Logo">
+        </div>
+        <div class="pd-info">
+          <div class="cart-text-dark">{{selectedCompanyInfo.operator}}</div>
+          <div>{{ dataRecharge.phone }}</div>
+        </div>
+        <div class="pd-price">
+          <h4 class="cart-text-blue">${{ dataRecharge.amount }}</h4>
+        </div>
+      </div>
+
+      <div class="payment-cards">
+        <div class="cart-text-dark">{{ "PAYMENT_RECHARGE_LBL_1" | translate }}</div>
+        <br>
+        <div class="pc-wallets transfer-cards payment-recharge-types">
+
+            <md-radio-group ng-model="paymentMethod" class="payment-recharge-types-radio-group">
+
+              <div ng-if="wallet_balance >= (dataRecharge.amount + COMISSION)" class="transfer-card" ng-click="selectPaymentService('')">
+
+                <md-radio-button ng-value="" class="payment-recharge-types-radio-button">
+                  <div class="card-wallet height-100">
+                    <div class="cw-header">
+                      <h4 class="cw-text">{{ "PAYMENT_RECHARGE_LBL_2" | translate }}</h4>
+                      <img src="images/2.png" alt="Logo LetAccount">
+                    </div>
+                    <div class="cw-body payment-recharge-type">
+                      <h4 class="cw-text">{{ "PAYMENT_RECHARGE_LBL_3" | translate }}</h4>
+                      <h3 class="cw-text">••••  ••••</h3>
+                    </div>
+                  </div>
+                </md-radio-button>
+
+              </div>
+
+              <div ng-repeat="item in cardsLetAccount" class="transfer-card payment-recharge-card-border" ng-click="selectPaymentService(item.token_id)">
+                <md-radio-button ng-value="item.customer_id" class="payment-recharge-types-radio-button">
+                  <div class="card-wallet height-100" ng-style="selectColorCard(item.brand)">
+                    <div class="cw-header">
+                      <h4 class="cw-text"></h4>
+                      <img ng-if="item.brand == 'visa'" src="img/visa.svg" alt="Logo LetAccount" class="payment-recharge-brand">
+                      <img ng-if="item.brand == 'mastercard'" src="img/mastercard.svg" alt="Logo LetAccount" class="payment-recharge-brand">
+                      <img ng-if="item.brand == 'american_express' || item.brand == 'amex'" src="img/amex.svg" alt="Logo LetAccount" class="payment-recharge-brand">
+                    </div>
+                    <div class="cw-body payment-recharge-type">
+                      <h4 ng-if="item.card_type == 'credit'" class="cw-text">{{ "CARD_CUSTOMER_LBL_2" | translate }}</h4>
+                      <h4 ng-if="item.card_type == 'debit'" class="cw-text">{{ "CARD_CUSTOMER_LBL_3" | translate }}</h4>
+                      <h4 ng-if="item.card_type == 'service'" class="cw-text">{{ "CARD_CUSTOMER_LBL_4" | translate }}</h4>
+                      <h3 class="cw-text">••••  {{ item.last4 }}</h3>
+                    </div>
+
+                    <div class="cw-footer">
+
+                      <h4 class="cw-text"></h4>
+                    </div>
+                  </div>
+                </md-radio-button>
+              </div>
+
+            </md-radio-group>
+
+        </div>
+      </div>
+
+    </div>
+  </ion-content>
+
+  <center>
+    <div class="little-shop-div-btn-payment">
+      <div class="recharge-payment-button" ng-click="paymentRecharge()">
+        {{ "CARD_LBL_5" | translate }}
+      </div>
+    </div>
+  </center>
+
+  <md-button class="btn-back" ng-click="closeModalPaymentRecharge()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+  <div class="toolbar-header-title">
+    <h3>{{ "PAYMENT_RECHARGE_LBL_4" | translate }}</h3>
+  </div>
+
+</ion-modal-view>

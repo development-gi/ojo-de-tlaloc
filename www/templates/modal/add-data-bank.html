@@ -1,0 +1,67 @@
+<ion-modal-view class="let-background-base-header">
+
+  <ion-content scroll="true" overflow-scroll="false" class="top-36">
+
+    <div class="register-complete-record-content">
+      <div class="data-bank-info">
+        <div class="step-register" style="color: white!important">
+          {{"DATA_BANK_LBL_4" | translate}}
+          <br><br>
+          <label style="color: white!important" class="register-subtitle">{{"REGISTER_LBL_1" | translate}}</label>
+        </div>
+
+        <div class="margin-left-12 margin-right-12 text-input-label bottom-space" style="color: white!important">{{"DATA_BANK_LBL_5" | translate}}</div>
+        <div class="select-data-container margin-left-12 margin-right-12 custom-select">
+          <select class="select-data catalog-select" ng-model="dataBankAux.banking_institution">
+            <option value="" disabled selected>{{ "DATA_BANK_LBL_20" | translate }}</option>
+            <option ng-repeat="bank in banks" value="{{bank.name}}">{{bank.name}}</option>
+          </select>
+        </div>
+        <br>
+
+        <div class="margin-left-12 margin-right-12 text-input-label bottom-space" style="color: white!important">{{"TYPE_ACCOUNT_1" | translate}}</div>
+        <div class="select-data-container margin-left-12 margin-right-12 custom-select">
+          <select class="select-data catalog-select" ng-model="dataBankAux.bank_account_type">
+            <option value="Crédito">{{ "CARD_CUSTOMER_LBL_2" | translate }}</option>
+            <option value="Débito">{{ "CARD_CUSTOMER_LBL_3" | translate }}</option>
+            <option value="Servicios">{{ "CARD_CUSTOMER_LBL_4" | translate }}</option>
+          </select>
+        </div>
+        <br>
+
+        <div class="margin-left-12 margin-right-12 text-input-label bottom-space" style="color: white!important">{{"DATA_BANK_LBL_6" | translate}}</div>
+        <div class="margin-left-12 margin-right-12">
+          <div class="let-input-transparent">
+            <input type="text" ng-model="dataBankAux.interbank_number" maxlength="50">
+          </div>
+        </div>
+        <br>
+
+        <div class="margin-left-12 margin-right-12 text-input-label bottom-space" style="color: white!important">{{"DATA_BANK_LBL_14" | translate}}</div>
+        <div class="margin-left-12 margin-right-12">
+          <div class="let-input-transparent">
+            <input type="text" ng-model="dataBankAux.name_owner_bank_account" maxlength="50">
+          </div>
+        </div>
+        <br>
+
+        <div class="data-btn">
+          <md-button ng-click="confirmDataBank()" class="let-btn-fill">
+            {{ "DATA_BANK_LBL_7" | translate }}
+          </md-button>
+        </div>
+        <br><br><br>
+      </div>
+    </div>
+
+  </ion-content>
+
+  <md-button class="btn-back" ng-click="closeModalDataBank()" aria-label="Settings">
+    <img src="images/menu/down.svg" class="toolbar-header-button-img"/>
+  </md-button>
+
+  <div class="toolbar-header-title">
+    <h3 class="let-label-config-title">{{ "CONFIG_MENU_LBL_9" | translate }}</h3>
+  </div>
+
+</ion-modal-view>

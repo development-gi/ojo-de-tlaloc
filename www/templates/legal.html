@@ -1,0 +1,100 @@
+<ion-view class="background-default">
+
+  <ion-content scroll="true" overflow-scroll="false">
+
+    <div style="padding: 10px!important; text-align: justify">
+
+      <center>
+        <h3>Consentimiento</h3>
+        <br><br>
+        <img src="images/512.png" style="width: 100px; border-radius: 10px;">
+        <br>
+        <h4><b>{{ NAME_APP }}</b></h4>
+        <p style="color: darkgrey">by {{ COMPANY }}
+          <br>
+          {{CurrentDate | date:'yyyy'}}</p>
+        <div class="row">
+          <div class="col">
+            <md-button ng-click="goAcept(true)" class="md-raised btn1-block default-primary-color border-radius-btn" style="border:1px solid #002f53!important;border-radius: 5px!important;">
+              Aceptar y continuar
+            </md-button>
+          </div>
+          <div class="col">
+            <md-button ng-click="goAcept(false)" class="btn1-block border-radius-btn" style="border:2px solid #002f53!important; color: #000000!important;border-radius: 5px!important;">
+              No acepto
+            </md-button>
+          </div>
+        </div>
+      </center>
+      <br><br>
+
+      <b style="font-size: medium">Legal</b>
+
+      <div class="row">
+        <div class="col" style="display: contents;">
+          <li></li>
+        </div>
+        <div class="col">
+          <p style="font-size: small">
+            Los datos personales recabados serán protegidos, incorporados y tratados en los Sistema de Datos Personales de <b>{{NAME_APP}}</b>,
+            mismos que tienen su fundamento en la Ley de Protección de Datos Personales para la Ciudad de México Artículos 7, 8, 9, 13, 14 y 15,
+            Ley de Transparencia y Acceso a la información Pública de la Ciudad de México, Artículos 36 y 38 fracción I y IV,
+            Ley de Archivos de la Ciudad de México Artículos 30 fracción VI y VII, 31, 32, 33, 34, 35 fracción VIII, 37, 38 y 40,
+            Reglamento de la Ley de Transparencia y Acceso a la Información Pública de la Ciudad de México Artículos 23, 30 al 32,
+            Lineamientos para la Protección de Datos Personales en la Ciudad de México, Numerales 5, 10, 11 y 13.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col" style="display: contents;">
+          <li></li>
+        </div>
+        <div class="col">
+          <p style="font-size: small">
+            Los datos requeridos son obligatorios y sin ellos no podrán completarse las gestiones pertinentes para brindar los servicios solicitados.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col" style="display: contents;">
+          <li></li>
+        </div>
+        <div class="col">
+          <p style="font-size: small">
+            Asimismo, se le informa que sus datos no podrán ser difundidos sin su consentimiento expreso, salvo las excepciones previstas en la Ley.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col" style="display: contents;">
+          <li></li>
+        </div>
+        <div class="col">
+          <p style="font-size: small">
+            El responsable del Sistema de datos personales es <b>{{ COMPANY }}</b>. y la dirección de correo donde podrá ejercer los derechos de acceso,
+            rectificación, cancelación y oposición, así como la revocación del consentimiento es {{ EMAIL }}.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col" style="display: contents;">
+          <li></li>
+        </div>
+        <div class="col">
+          <p style="font-size: small">
+            El interesado podrá dirigirse al Instituto de Acceso a la Información Pública de la Ciudad de México, donde recibirá asesoría sobre los derechos
+            que tutela la Ley de Protección de Datos Personales para la Ciudad de México al teléfono: 5636-4636; correo electrónico:
+            datos.personales@infodf.org.mx o www.infodf.org.mx.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+
+</ion-view>

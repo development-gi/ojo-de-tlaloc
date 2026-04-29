@@ -1,0 +1,40 @@
+{
+  "name": "awesome-phonenumber",
+  "description": "Google's libphonenumber pre-compiled with the closure compiler",
+  "license": "MIT",
+  "version": "1.2.0",
+  "author": "Gustaf Räntilä <g.rantila@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grantila/awesome-phonenumber.git"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/gulp",
+    "test": "node_modules/.bin/mocha"
+  },
+  "pre-commit": [
+    "test"
+  ],
+  "keywords": [
+    "libphonenumber",
+    "phonenumber",
+    "phone",
+    "number",
+    "closure",
+    "web",
+    "browser",
+    "browserify",
+    "awesome"
+  ],
+  "devDependencies": {
+    "bluebird": "^3",
+    "chai": "^3.5",
+    "google-closure-compiler": "^20160713.2.0",
+    "gulp": "^3.9",
+    "mkdirp": "^0.5.1",
+    "mocha": "^3",
+    "pre-commit": "^1.1",
+    "rimraf-promise": "^2.0",
+    "run-sequence": "^1.2"
+  }
+}

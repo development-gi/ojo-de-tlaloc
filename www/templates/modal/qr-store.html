@@ -1,0 +1,35 @@
+<ion-modal-view class="background-base-popover">
+
+  <ion-content class="amount-ion-content background-color-yellow-qr" scroll="false">
+
+    <div class="wallet-div-qr-code qr-store-div">
+      <div class="qr-code-table-div">
+        <div id="qrcodeTable"></div>
+      </div>
+      <h2 class="qr-code-folio">{{ store_id }}</h2>
+        <h5 class="font-weight-bold text-center">{{ "QR_STORE_LBL_1" | translate }}</h5>
+      <div class="div-width-200 text-center">
+
+        <md-input-container class="md-block border-color-base color-base margin-0 margin-left-10 margin-right-10" flex-gt-sm md-theme="alt">
+          <input type="text" class="cajitas input-has-focus code-email" ng-model="dataPaymentFolio.folio" ng-keyup="convertToMayusFolio()" maxlength="6">
+        </md-input-container>
+
+        <div class="login-btn margin-top-15">
+          <md-button class="btn-star register-btn" ng-click="validatePayment()">
+            {{ "CONFIRM" | translate }}
+          </md-button>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="qr-code-amount">
+      <h1 id="total_qr_store"></h1><sup>MXN</sup>
+    </div>
+
+  </ion-content>
+  <md-button class="btn-back" ng-click="closeModalQRStore()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+</ion-modal-view>

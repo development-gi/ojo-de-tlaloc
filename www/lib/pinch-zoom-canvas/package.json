@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "pinch-zoom-canvas",
+        "scope": null,
+        "escapedName": "pinch-zoom-canvas",
+        "name": "pinch-zoom-canvas",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\intel\\Documents\\AndroidProjects\\CheckPDV"
+    ]
+  ],
+  "_from": "pinch-zoom-canvas@latest",
+  "_id": "pinch-zoom-canvas@1.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/pinch-zoom-canvas",
+  "_nodeVersion": "4.4.3",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/pinch-zoom-canvas-1.0.1.tgz_1467807034534_0.2774646617472172"
+  },
+  "_npmUser": {
+    "name": "vash15",
+    "email": "bellucomichele@gmail.com"
+  },
+  "_npmVersion": "2.15.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "pinch-zoom-canvas",
+    "scope": null,
+    "escapedName": "pinch-zoom-canvas",
+    "name": "pinch-zoom-canvas",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/pinch-zoom-canvas/-/pinch-zoom-canvas-1.0.1.tgz",
+  "_shasum": "1dd905c0b9b8cc1e6ae278bc11aae2407a83ca3f",
+  "_shrinkwrap": null,
+  "_spec": "pinch-zoom-canvas",
+  "_where": "C:\\Users\\intel\\Documents\\AndroidProjects\\CheckPDV",
+  "author": {
+    "name": "Michele Belluco"
+  },
+  "bugs": {
+    "url": "https://github.com/vash15/pinch-zoom-canvas/issues"
+  },
+  "contributors": [
+    {
+      "name": "Matteo Baggio"
+    }
+  ],
+  "dependencies": {
+    "impetus": "git+https://github.com/SonoIo/impetus.git#master"
+  },
+  "description": "Pinch zoom to images based on canvas",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "1dd905c0b9b8cc1e6ae278bc11aae2407a83ca3f",
+    "tarball": "https://registry.npmjs.org/pinch-zoom-canvas/-/pinch-zoom-canvas-1.0.1.tgz"
+  },
+  "gitHead": "d21d1f5cbade6834382e37a61361c2e64b84ac41",
+  "homepage": "https://github.com/vash15/pinch-zoom-canvas#readme",
+  "keywords": [
+    "pinch",
+    "zoom",
+    "canvas",
+    "image",
+    "html5",
+    "js",
+    "vanilla",
+    "code"
+  ],
+  "license": "MIT",
+  "main": "pinch-zoom-canvas.js",
+  "maintainers": [
+    {
+      "name": "vash15",
+      "email": "bellucomichele@gmail.com"
+    }
+  ],
+  "name": "pinch-zoom-canvas",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vash15/pinch-zoom-canvas.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1"
+}

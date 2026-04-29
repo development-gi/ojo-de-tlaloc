@@ -1,0 +1,64 @@
+<ion-modal-view style="background-color: rgb(250,250,250);">
+
+  <ion-content style="width: 100%; height: 100%; background-color: rgb(250,250,250);!important; padding-top: 55px;" scroll="false">
+
+    <!-- A G R E G A R   N U M E R O   D E   C A M A R A S   A S I G N A D A S   A L   P O S T E -->
+    <div class="row" style="padding: 0!important; display: block;">
+
+      <md-subheader class="md-no-sticky">Número de cámaras asignadas al poste</md-subheader>
+
+      <div class="row">
+
+        <div class="col" style="width: 50%">
+          <md-card md-theme="default" md-theme-watch>
+            <md-card-content>
+              <div style="line-height: 115%; padding: 5px; text-align: center;">
+                <img src="images/ptz.png" height="80">
+                <p style="color: #000; font-weight: bold;">PTZ</p>
+                <md-input-container class="md-block" style="margin: 0 30px!important;">
+                  <input type="number" ng-model="dataCamera.ptz" class="border-color-base" style="text-align: center; font-size: 30px!important;">
+                </md-input-container>
+              </div>
+            </md-card-content>
+          </md-card>
+        </div>
+
+        <div class="col" style="width: 50%">
+          <md-card md-theme="default" md-theme-watch>
+            <md-card-content>
+              <div style="line-height: 115%; padding: 5px; text-align: center;">
+                <img src="images/bullet.png" height="80px">
+                <p style="color: #000; font-weight: bold">Bullet</p>
+                <md-input-container class="md-block" style="margin: 0 30px!important;">
+                  <input type="number" ng-model="dataCamera.bullet" class="border-color-base" style="text-align: center; font-size: 30px!important;">
+                </md-input-container>
+              </div>
+            </md-card-content>
+          </md-card>
+        </div>
+
+      </div>
+
+      <div style="padding: 10px">
+        <div ng-click="validateAndSaveCameras()"
+             ng-class="'btn-pulse-continue'">
+          Enviar información
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+
+  <!-- H E A D E R -->
+  <!-- B U T T O N   L E F T -->
+  <md-button class="btn-back" ng-click="closeModalViewInfoCameras()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+  <!-- T I T L E -->
+  <div class="toolbar-header-title">
+    <h3>{{ type_title }}</h3>
+  </div>
+
+</ion-modal-view>

@@ -1,0 +1,27 @@
+<ion-modal-view class="background-base-popover">
+
+  <ion-content class="complete-payment-store-content" scroll="false">
+
+    <div class="complete-payment-store-content-div">
+      <img src="images/success.png" class="float_anim width-100"/>
+      <h4 class="font-weight-bold">{{ "SUCCESS_ADD_CARD_LBL_1" | translate }}</h4>
+      <center>{{ "SUCCESS_ADD_CARD_LBL_2" | translate }}</center>
+      <br><br><br>
+
+      <div class="success-card-btn">
+        <md-button ng-click="closeModalSuccessCard()" class="btn1-block md-button-black-container">
+          {{ "CLOSE" | translate }}
+        </md-button>
+      </div>
+
+    </div>
+
+  </ion-content>
+
+  <!--
+  <md-button class="btn-back" ng-click="closeModalSuccessCard()" aria-label="Settings">
+    <img src="images/icons/close-2.png" class="toolbar-header-button-img"/>
+  </md-button>
+  -->
+
+</ion-modal-view>

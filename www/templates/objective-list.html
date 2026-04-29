@@ -1,0 +1,75 @@
+<ion-view class="background-default">
+
+  <ion-content class="edit-target-content" scroll="true" overflow-scroll="true" style="top: 57px;">
+
+    <md-card class="objective-card" style="margin-bottom: 16px;"
+             ng-repeat="obj in currentTargetList.targets"
+             ng-click="selectObjective(obj)"
+             ng-class="obj.status ? 'objective-active' : 'objective-disabled'">
+
+      <md-card-content class="objective-card-content">
+
+        <!-- AVATAR -->
+        <div class="objective-avatar">
+          <img ng-if="obj.pic_name && !obj.imageError"
+               ng-src="{{ BASE_URL_IMG }}targets/{{ obj.pic_name }}"
+               class="avatar-img"
+               alt="Foto del objetivo"
+               ng-error="obj.imageError = true">
+
+          <div ng-if="!obj.pic_name || obj.imageError"
+               class="avatar-placeholder">
+            <md-icon class="material-icons">person</md-icon>
+          </div>
+        </div>
+
+        <!-- INFO -->
+        <div class="objective-info">
+
+          <p class="objective-name">
+            {{ obj.name }} - {{ obj.gender == '1' ? 'Hombre' : 'Mujer' }}
+          </p>
+
+          <p class="objective-text">
+            {{ obj.birthday | date:'dd \'de\' MMM. \'de\' yyyy' }}
+          </p>
+
+          <p class="objective-text">
+            {{ obj.city }} / {{ obj.province }}
+          </p>
+
+          <p class="objective-text">
+            {{ cardTypes[obj.card_type] || 'Desconocido' }} - {{ obj.card_id }}
+          </p>
+
+        </div>
+
+        <!-- ESTADO -->
+        <div class="objective-status">
+          <span class="status-badge"
+                ng-class="obj.status ? 'status-on' : 'status-off'">
+            {{ obj.status ? 'Activo' : 'Deshabilitado' }}
+          </span>
+        </div>
+
+      </md-card-content>
+    </md-card>
+    <br>
+
+  </ion-content>
+
+  <md-toolbar class="tlaloc-header">
+    <div class="md-toolbar-tools">
+      <!-- Botón izquierdo -->
+      <md-button class="md-icon-button"
+                 ng-click="goBack()"
+                 aria-label="Menu">
+        <img src="images/new/arrow-left.svg" class="toolbar-icon">
+      </md-button>
+      <!-- Título -->
+      <h2 class="toolbar-title-modules">{{ listName }}
+      </h2>
+    </div>
+  </md-toolbar>
+
+</ion-view>

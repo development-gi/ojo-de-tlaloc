@@ -1,0 +1,45 @@
+<ion-modal-view class="let-background-base-header">
+
+  <ion-content scroll="false" overflow-scroll="false" class="top-56">
+
+    <div class="box-excel">
+      <label class="let-label-config-title">Descarga el formato de solicitud y carga los resultados</label>
+      <br>
+      <div class="box-excel-colum">
+        <div class="excel-part">
+          <label class="let-label-config-title">Formato de solicitud</label>
+          <br>
+          <img src="images/xls.png" ng-click="downloadExcel()" style="height: 48px;width: 48px;"/>
+          <br>
+          <label class="let-label-config-title">(Pulsa para descargar)</label>
+        </div>
+        <div class="excel-part">
+          <label ng-show="return_request.file_movements_selected == null" class="let-label-config-title">Subir solicitud</label>
+          <label ng-show="return_request.file_movements_selected != null && return_request.file_movements_selected != 'undefined'" class="let-label-config-title">Cambiar archivo</label>
+          <br>
+          <img ng-show="return_request.file_movements_selected == null" src="images/pdf-upload.png" ng-click="selectedExcel()" style="height: 48px;width: 48px;"/>
+          <img ng-show="return_request.file_movements_selected != null" src="images/pdf-upload-ok.png" ng-click="selectedExcel()" style="height: 48px;width: 48px;"/>
+          <br>
+          <label class="let-label-config-title-orange">(.xls, .xlsx)</label>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="data-return-center">
+        <div class="data-return-btn" ng-click="closeModalInvoiceExcel()">
+          <label class="let-label-config-title">Continuar</label>
+          <img src="images/icons/arrow-down-white.png"/>
+        </div>
+      </div>
+      <br>
+    </div>
+
+  </ion-content>
+
+  <md-button class="btn-back" ng-click="closeModalInvoiceExcel()" aria-label="Settings">
+    <img src="images/icons/arrow-down-white.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+  <div class="toolbar-header-title">
+    <h3 class="let-label-config-title">Formato de solicitud</h3>
+  </div>
+</ion-modal-view>

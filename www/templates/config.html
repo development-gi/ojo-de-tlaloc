@@ -1,0 +1,64 @@
+<ion-view style="font-family: 'Quicksand-Regular';" id="popupContainer" class="background-default">
+
+  <ion-content scroll="true" overflow-scroll="false">
+
+    <div class="pulse-config-purple">
+    </div>
+
+    <div class="pulse-config-photo">
+      <img ng-src="{{avatar}}" onerror="this.onerror=null;this.src='images/user.png';"/>
+    </div>
+
+    <div class="pulse-config-card">
+      <div class="pulse-config-details">
+        <h5 class="pulse-title-detail">{{user.name}}</h5>
+        <label class="pulse-title-purple-light">Miembro desde {{user.contracting}}</label>
+      </div>
+      <div class="pulse-config-menu">
+        <div class="pulse-config-option" ng-click="goOpcionConfig(1)">
+          <div class="config-option-menu-text">
+            <label class="pulse-title-purple-light-small">Tu cumpleaños es el</label> <label class="pulse-title-detail">&nbsp;{{user.birthday}}</label>
+          </div>
+        </div>
+        <div class="pulse-config-option" ng-click="goOpcionConfig(2)">
+          <div class="config-option-menu-text">
+            <label class="pulse-title-purple-light-small">Tu usuario es</label> <label class="pulse-title-detail">&nbsp;{{user.username}}</label>
+          </div>
+        </div>
+        <div class="pulse-config-option">
+          <div class="config-option-menu-text">
+            <label class="pulse-title-purple-light-small">Tu telefono es </label> <label class="pulse-title-detail">&nbsp;{{user.phone}}</label>
+          </div>
+        </div>
+        <div class="pulse-config-option" ng-if="user.plant == true">
+          <div class="config-option-menu-text">
+            <label class="pulse-title-purple-light-small">Tu perfíl es</label> <label class="pulse-title-detail">&nbsp;Planta</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+
+  <md-toolbar class="tlaloc-header-config">
+    <div class="md-toolbar-tools">
+      <!-- Botón izquierdo -->
+      <md-button class="md-icon-button"
+                 ng-click="return()"
+                 aria-label="Menu">
+        <img src="images/new/back.svg" class="toolbar-icon">
+      </md-button>
+      <!-- Título -->
+      <h2 class="toolbar-title-config">Mi Perfil
+      </h2>
+      <span flex></span>
+      <!-- Botón derecho -->
+      <md-button class="md-icon-button"
+                 ng-click="avatarCamera()"
+                 aria-label="Camera">
+        <img src="images/new/camera.svg" class="toolbar-icon">
+      </md-button>
+    </div>
+  </md-toolbar>
+
+</ion-view>

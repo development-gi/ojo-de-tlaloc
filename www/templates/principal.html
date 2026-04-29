@@ -1,0 +1,107 @@
+<ion-view>
+
+  <md-toolbar class="tlaloc-header">
+    <div class="md-toolbar-tools">
+      <!-- Botón izquierdo -->
+      <md-button class="md-icon-button"
+                 ng-click="menugral(4)"
+                 aria-label="Menu">
+        <img src="images/new/menu.svg" class="toolbar-icon">
+      </md-button>
+      <!-- Título -->
+      <h2 class="toolbar-title">
+      </h2>
+      <span flex></span>
+      <!-- Botón derecho -->
+      <md-button class="md-icon-button"
+                 ng-click="menugral(5)"
+                 aria-label="Notifications">
+        <img src="images/new/noti.svg" class="toolbar-icon">
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <ion-content scroll="true" overflow-scroll="false" class="background-default" style="top: 57px;">
+    <audio id="audio1" media-player="audio1" data-playlist="playlist1">
+      <source src="audio/prev.mp3" type="audio/mp3">
+    </audio>
+
+    <div layout="column" class="tlaloc-welcome">
+      <h3 class="tlaloc-title">Hola {{ user.name }}</h3>
+      <p class="tlaloc-subtitle">Bienvenido, este es tu recuento</p>
+    </div>
+
+    <md-card class="sales-card">
+      <md-card-content>
+
+        <div class="sales-header">
+          <span class="sales-label">Objetivos</span>
+          <h4 class="sales-amount">1038 localizados</h4>
+          <span class="sales-diff">Umbral de alerta</span>
+        </div>
+
+        <!-- Highcharts -->
+        <highchart
+          config="salesChartConfig"
+          class="sales-chart">
+        </highchart>
+
+      </md-card-content>
+    </md-card>
+
+    <div class="tlaloc-modules-header">
+      <h4 class="tlaloc-modules-title">Tus módulos</h4>
+    </div>
+
+    <div layout="row" layout-wrap class="tlaloc-modules">
+
+      <!-- Módulo 1 -->
+      <div flex="50">
+        <md-card class="module-card module-primary">
+          <md-card-content ng-click="menugral(1)">
+            <p class="module-title">Objetivos</p>
+            <img src="images/new/users.svg" class="module-icon">
+            <span class="module-arrow">→</span>
+          </md-card-content>
+        </md-card>
+      </div>
+
+      <!-- Módulo 2 -->
+      <div flex="50">
+        <md-card class="module-card module-secondary">
+          <md-card-content ng-click="menugral(2)">
+            <p class="module-title">Cámaras</p>
+            <img src="images/new/video.svg" class="module-icon">
+            <span class="module-arrow">→</span>
+          </md-card-content>
+        </md-card>
+      </div>
+
+      <!-- Módulo 3 -->
+      <div flex="50">
+        <md-card class="module-card module-light">
+          <md-card-content ng-click="menugral(3)">
+            <p class="module-title">Postes</p>
+            <img src="images/new/ruler.svg" class="module-icon">
+            <span class="module-arrow">→</span>
+          </md-card-content>
+        </md-card>
+      </div>
+
+      <!-- Módulo 4 -->
+      <div flex="50">
+        <md-card class="module-card module-dark">
+          <md-card-content ng-click="menugral(4)">
+            <p class="module-title">Configuración</p>
+            <img src="images/new/config.svg" class="module-icon">
+            <span class="module-arrow">→</span>
+          </md-card-content>
+        </md-card>
+      </div>
+
+    </div>
+
+  </ion-content>
+
+
+</ion-view>

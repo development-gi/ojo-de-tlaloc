@@ -1,0 +1,33 @@
+<ion-modal-view class="background-base-popover">
+
+  <ion-content class="complete-payment-store-content" scroll="false">
+
+    <div class="complete-payment-store-content-div">
+
+      <img src="images/success-payment-store.png" class="float_anim width-100"/>
+      <h4 class="complete-payment-store-content-title">
+        {{ "COMPLETE_PAYMENT_STORE_LBL_1" | translate }}
+      </h4>
+      <center>
+        {{ "COMPLETE_PAYMENT_STORE_LBL_2" | translate }}
+        <br>
+        <br>
+        <h2 id="folio_payment_store" class="complete-payment-store-content-folio"></h2>
+      </center>
+      <br>
+      <div class="complete-payment-store-btn">
+        <md-button ng-click="closeModalCompletePaymentStore()" class="btn1-block md-button-black-container">
+          {{ "CONTINUE" | translate }}
+        </md-button>
+      </div>
+    </div>
+
+  </ion-content>
+
+  <!--
+  <md-button class="btn-back" ng-click="closeModalCompletePaymentStore()" aria-label="Settings">
+    <img src="images/icons/close-2.png" class="toolbar-header-button-img"/>
+  </md-button>
+  -->
+
+</ion-modal-view>

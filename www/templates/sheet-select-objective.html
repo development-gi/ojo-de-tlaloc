@@ -1,0 +1,33 @@
+<md-bottom-sheet class="list-sheet">
+
+  <div class="sheet-header">
+    <h3>{{ objective.name }}</h3>
+  </div>
+
+  <md-list>
+
+    <!-- ACCIÓN: CAMBIAR ESTADO DEL OBJETIVO -->
+    <md-list-item ng-click="toggleObjective()">
+      <md-icon class="material-icons">
+        {{ objective.status
+        ? 'person_off'
+        : 'person' }}
+      </md-icon>
+      <p>
+        {{ objective.status
+        ? 'Deshabilitar'
+        : 'Habilitar' }}
+      </p>
+    </md-list-item>
+
+    <md-list-item
+      ng-if="objective.status === true"
+      ng-click="editObjective()">
+
+      <md-icon class="material-icons">edit</md-icon>
+      <p>Editar</p>
+    </md-list-item>
+
+  </md-list>
+
+</md-bottom-sheet>

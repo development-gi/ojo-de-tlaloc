@@ -1,0 +1,25 @@
+<ion-modal-view class="background-base-popover">
+
+  <div class="bar bar-header barras bar-light background-base-popover">
+
+    <button class="button button-icon icon width-50">
+      <md-button class="md-icon-button margin-0" ng-click="closeModalScanningProduct()" aria-label="Settings">
+        <img src="img/down-arrow.svg" width="20px">
+      </md-button>
+    </button>
+
+    <div class="title font_title scanning-product-title">{{ "SCANNING_PRODUCT_LBL_1" | translate }}</div>
+
+  </div>
+
+  <ion-content class="scanning-product-content" scroll="false">
+
+    <div class="scanning-product-content-qr">
+
+      <div id="qr-reader" class="scanning-product-content-qr-reader"></div>
+
+    </div>
+
+  </ion-content>
+
+</ion-modal-view>

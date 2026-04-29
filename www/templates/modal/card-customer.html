@@ -1,0 +1,49 @@
+<ion-modal-view class="background-base-popover">
+
+  <ion-content scroll="false" class="div-ion-content">
+
+    <div ng-if="cards.length == 0 || cards == null" class="card-new-div-none">
+      <div class="card-new-none" ng-click="addCard()">
+        <p class="font-base-regular custom-item-list color-grey-dark">
+          {{ "CARD_CUSTOMER_LBL_1" | translate }}
+        </p>
+
+        <img src="images/icons/add-black.png" class="height-25">
+
+      </div>
+
+    </div>
+
+    <div ng-if="cards.length > 0">
+      <div ng-repeat="card in cards" class="width-100-percentage" ng-if="card.blockade == false">
+
+        <div class="my-cards" ng-click="paymentCard(card.customer_id, card.token_id, $event)">
+          <div class="my-cards-img">
+            <img ng-src="images/{{ card.brand }}.png">
+          </div>
+          <div class="my-cards-info cart-text-dark">
+            ••••  {{ card['last4'] }}
+
+            <b ng-if="card.card_type == 'credit'">{{ "CARD_CUSTOMER_LBL_2" | translate }}</b>
+            <b ng-if="card.card_type == 'debit'">{{ "CARD_CUSTOMER_LBL_3" | translate }}</b>
+            <b ng-if="card.card_type == 'service'">{{ "CARD_CUSTOMER_LBL_4" | translate }}</b>
+
+          </div>
+          <div class="my-cards-buttons">
+            <md-icon md-svg-src="img/next2.svg"></md-icon>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </ion-content>
+
+  <md-button class="btn-back" ng-click="closeModalCardCustomer()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+  <div class="toolbar-header-title">
+    <h3>{{ "CARD_CUSTOMER_LBL_5" | translate }}</h3>
+  </div>
+
+</ion-modal-view>

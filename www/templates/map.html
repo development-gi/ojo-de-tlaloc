@@ -1,0 +1,43 @@
+<ion-view style="font-family: 'Quicksand-Regular';" class="background-default">
+
+
+  <ion-content scroll="false" overflow-scroll="false" style="top: 58px;">
+
+    <div id="map_static"></div>
+
+    <div style="position: fixed; bottom: 30px; right: 10px; z-index: 9999999!important; cursor: pointer;">
+
+      <img ng-if="switch_post == true" ng-src="images/markers/poste.png" alt="Postes" title="Postes" width="38" height="38" ng-click="changePost()"/>
+      <img ng-if="switch_post == false" ng-src="images/markers/poste-grey.png" alt="Postes" title="Postes" width="38" height="38" ng-click="changePost()"/>
+
+      <img ng-if="switch_internet == true" ng-src="images/markers/internet.png" alt="Internet" title="Internet contratado" width="38" height="38" ng-click="changeInternet()"/>
+      <img ng-if="switch_internet == false" ng-src="images/markers/internet-grey.png" alt="Internet" title="Internet contratado" width="38" height="38" ng-click="changeInternet()"/>
+
+      <img ng-if="switch_building == true" ng-src="images/markers/buildings.png" alt="Edificios" title="Edificios" width="38" height="38" ng-click="changeBuilding()"/>
+      <img ng-if="switch_building == false" ng-src="images/markers/buildings-grey.png" alt="Edificios" title="Edificios" width="38" height="38" ng-click="changeBuilding()"/>
+
+      <img ng-if="switch_400 == true" ng-src="images/markers/400.png" alt="400w" title="Megapostes de 400 watts" width="38" height="38" ng-click="change400()"/>
+      <img ng-if="switch_400 == false" ng-src="images/markers/400-grey.png" alt="400w" title="Megapostes 400 watts" width="38" height="38" ng-click="change400()"/>
+
+      <img ng-if="switch_500 == true" ng-src="images/markers/500.png" alt="500w" title="Megapostes de 500 watts" width="38" height="38" ng-click="change500()"/>
+      <img ng-if="switch_500 == false" ng-src="images/markers/500-grey.png" alt="500w" title="Megapostes de 500 watts" width="38" height="38" ng-click="change500()"/>
+
+    </div>
+
+  </ion-content>
+
+  <md-toolbar class="tlaloc-header">
+    <div class="md-toolbar-tools">
+      <!-- Botón izquierdo -->
+      <md-button class="md-icon-button"
+                 ng-click="return()"
+                 aria-label="Menu">
+        <img src="images/new/arrow-left.svg" class="toolbar-icon">
+      </md-button>
+      <!-- Título -->
+      <h2 class="toolbar-title-modules">Postes
+      </h2>
+    </div>
+  </md-toolbar>
+
+</ion-view>

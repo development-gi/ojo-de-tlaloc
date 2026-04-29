@@ -1,0 +1,82 @@
+<ion-view style="font-family: 'Quicksand-Regular';" class="background-default">
+
+  <ion-content scroll="false" overflow-scroll="false">
+
+    <div class="pulse-config-purple">
+    </div>
+
+    <div class="pulse-config-photo">
+      <img ng-src="{{avatar}}" onerror="this.onerror=null;this.src='images/user.png';"/>
+    </div>
+
+    <div class="pulse-config-card">
+      <div class="pulse-config-details">
+        <h5 class="pulse-title-detail">{{ user.name }}</h5>
+        <label class="pulse-title-purple-light">{{ user.username }}</label>
+      </div>
+      <div class="pulse-config-menu">
+        <h4 class="pulse-title-purple">Selecciona alguna función</h4>
+        <div class="pulse-config-option" ng-click="goOpcionConfig(1)">
+          <div class="part">
+            <div class="config-option-icon">
+              <img src="images/new/user.svg"/>
+            </div>
+          </div>
+          <div ng-if="type_access !== 'apk_admin'" style="color: #8f8f8f; font-weight: bold; text-decoration-line: line-through;" class="part">
+            <label class="pulse-title-detail">Mi Perfil</label>
+            <label class="pulse-title-purple-light-small">Podras editar tu información</label>
+          </div>
+          <div ng-if="type_access === 'apk_admin'" class="part">
+            <label class="pulse-title-detail">Mi Perfil</label>
+            <label class="pulse-title-purple-light-small">Podras editar tu información</label>
+          </div>
+          <div class="part">
+            <div class="config-option-enter">
+              <img src="images/icons/next-purple.png"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="pulse-config-option">
+          <div class="config-option-icon">
+            <img src="images/new/config.svg"/>
+          </div>
+          <div class="config-option-text">
+            <label class="pulse-title-detail">Versión</label>
+            <label class="pulse-title-purple-light-small">{{version}}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+
+  <md-toolbar class="tlaloc-header-config">
+    <div class="md-toolbar-tools">
+      <!-- Botón izquierdo -->
+      <md-button class="md-icon-button"
+                 ng-click="return()"
+                 aria-label="Menu">
+        <img src="images/new/back.svg" class="toolbar-icon">
+      </md-button>
+      <!-- Título -->
+      <h2 class="toolbar-title-config">Configuración
+      </h2>
+    </div>
+  </md-toolbar>
+
+  <!-- N A V  B U T T O N S -->
+  <div class="config-close">
+    <div class="config-close-container">
+      <div class="config-close-button-about" ng-click="showInfo()">
+        <label class="pulse-title">Acerca de</label>
+        <img src="images/icons/cards.png"/>
+      </div>
+      <div class="config-close-button-close" ng-click="logout()">
+        <label class="pulse-title">Cerrar Sesión</label>
+        <img src="images/icons/close.png"/>
+      </div>
+    </div>
+  </div>
+
+</ion-view>

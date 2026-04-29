@@ -1,0 +1,53 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-footer-bar ng-if="legalview == 1" style="height: 43px!important;" class="default-primary-color">
+
+    <ion-tabs class="tabs-icon-top tabs-color-active-positive default-primary-color">
+      <ion-tab title="Mapa" icon-off="ion-ios-location-outline" icon-on="ion-ios-location" ng-click="menugral(7)" href="#/menu/map"></ion-tab>
+
+      <!--<ion-tab title="Historial" icon-off="ion-ios-clock-outline" icon-on="ion-ios-clock" ng-click="menugral(1)" href="#/menu/history"></ion-tab>
+
+      <ion-tab title="Cuenta" icon-off="ion-ios-briefcase-outline" icon-on="ion-ios-briefcase" ng-click="menugral(6)" href="#/menu/balance"></ion-tab>-->
+
+      <ion-tab title="Reportar" icon-off="ion-ios-compose-outline" icon-on="ion-ios-compose" ng-click="menugral(5)" href="#/menu/qualify"></ion-tab>
+
+      <ion-tab title="Configura" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" ng-click="menugral(2)" href="#/menu/configmenu"></ion-tab>
+
+      <md-menu md-position-mode="target-right target">
+        <ion-tab title="Comparte" icon-off="ion-ios-redo-outline" icon-on="ion-ios-redo-outline" ng-click="openMenu($mdMenu, $event)"></ion-tab>
+        <md-menu-content width="4">
+          <md-menu-item>
+            <md-button ng-click="share(1)">
+              <label style="color: #3DDD63; font-size: 18px" class="ion-social-whatsapp"></label>
+              &nbsp;whatsapp
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button ng-click="share(2)">
+              <label style="color: #3B5998; font-size: 18px" class="ion-social-facebook"></label>
+              &nbsp;&nbsp;&nbsp;facebook
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button ng-click="share(3)">
+              <label style="color: #55ACEE; font-size: 18px" class="ion-social-twitter"></label>
+              &nbsp;twitter
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button ng-click="share(4)">
+              <label style="color: #404040; font-size: 18px" class="ion-android-share-alt"></label>
+              &nbsp;&nbsp;Otros
+            </md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
+
+    </ion-tabs>
+
+  </ion-footer-bar>
+
+</ion-side-menus>

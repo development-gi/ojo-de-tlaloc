@@ -1,0 +1,94 @@
+<ion-modal-view class="background-base-popover">
+
+  <ion-content class="complete-payment-store-content" scroll="true">
+
+    <div class="complete-payment-store-content-div text-align-justify">
+
+      <div class="legal-div">
+
+        <center>
+          <h3>{{ "LEGAL_LBL_1" | translate }}</h3>
+          <br><br>
+          <img src="images/logo.png" class="legal-img">
+          <br>
+          <p class="color-grey-dark-2">{{ "LEGAL_LBL_2" | translate }} {{ COMPANY }}
+            <br>
+            {{CurrentDate | date:'yyyy'}}</p>
+
+        </center>
+        <br><br>
+
+        <b class="font-size-medium legal-color">{{ "LEGAL_LBL_5" | translate }}</b>
+
+        <div class="row">
+          <div class="col display-contents">
+            <li class="legal-color"></li>
+          </div>
+          <div class="col">
+            <p class="font-size-small">
+              {{ "LEGAL_LBL_6" | translate }}
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col display-contents">
+            <li class="legal-color"></li>
+          </div>
+          <div class="col">
+            <p class="font-size-small">
+              {{ "LEGAL_LBL_7" | translate }}
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col display-contents">
+            <li class="legal-color"></li>
+          </div>
+          <div class="col">
+            <p class="font-size-small">
+              {{ "LEGAL_LBL_8" | translate }}
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col display-contents">
+            <li class="legal-color"></li>
+          </div>
+          <div class="col">
+            <p class="font-size-small">
+              {{ "LEGAL_LBL_9" | translate }}
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col display-contents">
+            <li class="legal-color"></li>
+          </div>
+          <div class="col">
+            <p class="font-size-small">
+              {{ "LEGAL_LBL_10" | translate }}
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="success-card-btn">
+        <md-button ng-click="closeModalLegal()" class="btn1-block md-button-black-container">
+          {{ "CLOSE" | translate }}
+        </md-button>
+      </div>
+
+    </div>
+
+  </ion-content>
+
+  <md-button class="btn-back" ng-click="closeModalLegal()" aria-label="Settings">
+    <img src="images/icons/close-2.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+</ion-modal-view>

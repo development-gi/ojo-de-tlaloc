@@ -1,7 +1,10 @@
 {
   "name": "Ojo de Tlaloc",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
   },
   "type": "angular"
 }

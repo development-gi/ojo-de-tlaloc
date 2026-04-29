@@ -1,0 +1,13 @@
+<div class="error-div">
+  <md-dialog-content class="md-dialog-content">
+    <h3 class="md-title ng-binding font-base">{{ "COMPLETE_RECORD_LBL_1" | translate }}</h3><!-- ngIf: ::dialog.mdHtmlContent --><!-- ngIf: ::!dialog.mdHtmlContent -->
+    <div class="md-dialog-content-body">
+      <p class="ng-binding texto-regular">{{ "COMPLETE_RECORD_LBL_2" | translate }}</p>
+    </div>
+  </md-dialog-content>
+  <div align="right">
+    <button ng-click="closeModalError()" class="md-primary md-confirm-button md-button md-default-theme md-ink-ripple md-autofocus error-btn" type="button"  >
+      <span class="ng-binding color-base font-base">{{ "COMPLETE_RECORD_LBL_3" | translate }}</span>
+    </button>
+  </div>
+</div>

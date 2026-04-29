@@ -1,0 +1,64 @@
+<ion-modal-view class="background-base-popover">
+
+  <ion-content class="amount-ion-content" scroll="false">
+
+    <div class="amount-div-content">
+
+      <center ng-if="paymentType === 0">
+        <img src="images/logo.png" height="80px"/><br/>
+        <p class="amount-p-tournament">{{ "AMOUNT_LBL_1" | translate }}</p>
+        <p class="amount-p-total-payment-pending">{{wallet_balance_lbl}}<sup>MXN</sup></p>
+      </center>
+      <br>
+
+      <center>
+        <p class="amount-p-total">{{ dataAmount.amount_aux }}</p>
+      </center>
+
+      <center>
+        <div class="amount-width-150">
+          <md-button ng-disabled="!dataAmount.amount" ng-click="setAmountEnter()" class="btn1-block md-button-black-container margin-0">
+            {{ "CONTINUE" | translate }}
+          </md-button>
+        </div>
+        <br>
+
+        <div class="amount-div-keyboardAmount-numbers">
+          <md-button ng-click="keyboardAmount('1')" class="btn1-block amount-button-white-container">1</md-button>
+          <md-button ng-click="keyboardAmount('2')" class="btn1-block amount-button-white-container">2</md-button>
+          <md-button ng-click="keyboardAmount('3')" class="btn1-block amount-button-white-container">3</md-button>
+        </div>
+
+        <div class="amount-div-keyboardAmount-numbers">
+          <md-button ng-click="keyboardAmount('4')" class="btn1-block amount-button-white-container">4</md-button>
+          <md-button ng-click="keyboardAmount('5')" class="btn1-block amount-button-white-container">5</md-button>
+          <md-button ng-click="keyboardAmount('6')" class="btn1-block amount-button-white-container">6</md-button>
+        </div>
+
+        <div class="amount-div-keyboardAmount-numbers">
+          <md-button ng-click="keyboardAmount('7')" class="btn1-block amount-button-white-container">7</md-button>
+          <md-button ng-click="keyboardAmount('8')" class="btn1-block amount-button-white-container">8</md-button>
+          <md-button ng-click="keyboardAmount('9')" class="btn1-block amount-button-white-container">9</md-button>
+        </div>
+
+        <div class="amount-div-keyboardAmount-numbers">
+          <md-button ng-click="keyboardAmount('.')" class="btn1-block amount-button-white-container">.</md-button>
+          <md-button ng-click="keyboardAmount('0')" class="btn1-block amount-button-white-container">0</md-button>
+          <md-button ng-click="keyboardAmount('-1')" class="btn1-block amount-button-white-container amount-btn-delete">
+            <img src="images/borrar.png" height="20px">
+          </md-button>
+        </div>
+
+      </center>
+
+    </div>
+
+  </ion-content>
+  <md-button class="btn-back" ng-click="closeModalAmount()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+  <div class="toolbar-header-title">
+    <h3>{{ "AMOUNT_LBL_2" | translate }}</h3>
+  </div>
+
+</ion-modal-view>

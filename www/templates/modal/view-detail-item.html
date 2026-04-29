@@ -1,0 +1,88 @@
+<ion-modal-view class="background-base-popover">
+
+  <ion-content class="amount-ion-content" scroll="false">
+
+    <div class="view-detail-item-div">
+      <br>
+      <div class="width-50">
+        <img src="images/history/{{ infoViewItem.balance }}.png" class="principal-menu-btn-circle-white service-icons"/>
+      </div>
+      <div>
+        <p class="margin-0-0-0 text-transform-capitalize">
+          <b>{{ infoViewItem.concept }}</b>
+        </p>
+        <p ng-if="infoViewItem.type_123 != ''" class="margin-0-0-0 text-transform-capitalize">
+          <b ng-if="infoViewItem.type_123 == 'recharge'">{{ "HISTORY_LBL_1" | translate }} - {{ infoViewItem.operator.toLowerCase() }} - {{ infoViewItem.category.toLowerCase() }}</b>
+          <b ng-if="infoViewItem.type_123 == 'service'">{{ "HISTORY_LBL_2" | translate }} - {{ infoViewItem.operator.toLowerCase() }} - {{ infoViewItem.category.toLowerCase() }}</b>
+        </p>
+
+        <div ng-if="infoViewItem.balance == 'little_shop' && user.profile == 4" class="history-brand-view">
+          <b>{{ "HISTORY_LBL_5" | translate }} {{ infoViewItem.cashier }}</b>
+        </div>
+
+        <p ng-if="infoViewItem.recibe_transferencia != null && infoViewItem.recibe_transferencia.trim() != ''" class="margin-0-0-0 text-transform-capitalize">
+          {{ "HISTORY_LBL_6" | translate }} {{ infoViewItem.recibe_transferencia }}
+        </p>
+        <p class="margin-0-0-0">
+          {{ formatDateTime(infoViewItem.updated_at) }}
+        </p>
+      </div>
+      <br>
+      <label class="font-weight-bold">
+        {{ "VIEW_DETAIL_ITEM_LBL_1" | translate }}
+      </label>
+      <div>
+        <b ng-if="infoViewItem.balance == 'transfer' || (infoViewItem.balance == 'little_shop' && infoViewItem.is_customer == user.id)" class="font-size-xx-large">-</b>
+        <b class="font-size-xx-large">{{ formatPrice(infoViewItem.total) }}</b>
+        <sup class="font-size-small font-weight-bold">MXN</sup>
+      </div>
+
+      <br>
+
+      <div ng-if="infoViewItem.type == 'wallet'">
+        <b>{{ "HISTORY_LBL_3" | translate }} {{ infoViewItem.brand }}</b>
+      </div>
+
+      <div ng-if="infoViewItem.type != 'wallet'" class="history-brand-view">
+        <b ng-if="infoViewItem.type == 'credit'">{{ "VIEW_DETAIL_ITEM_LBL_2" | translate }}</b>
+        <b ng-if="infoViewItem.type == 'debit'">{{ "VIEW_DETAIL_ITEM_LBL_3" | translate }}</b>
+        <b ng-if="infoViewItem.type == 'service'">{{ "VIEW_DETAIL_ITEM_LBL_4" | translate }}</b>
+        <b>{{ infoViewItem.account_type }}</b>
+
+        <div class="my-cards-img">
+          <img src="images/{{ infoViewItem.brand }}.png">
+        </div>
+
+      </div>
+      <br>
+      <br>
+      <md-divider ng-if="infoViewItem.detail.length > 0"></md-divider>
+      <div ng-if="infoViewItem.detail.length > 0">
+        {{ "VIEW_DETAIL_ITEM_LBL_5" | translate }}<b>{{ infoViewItem.detail.reference }}</b>
+        <br>
+        {{ infoViewItem.detail.type_payment }}
+      </div>
+      <md-divider ng-if="infoViewItem.sub_detail.length > 0"></md-divider>
+      <div ng-if="infoViewItem.sub_detail.length > 0" class="view-sub-detail-div">
+        <div ng-repeat="item in infoViewItem.sub_detail" class="content-detail-history">
+          <div class="padding-right-10">
+            <img ng-src="{{ BASE_URL_RELATIVE + item.avatar }}" class="height-50 width-50" src="{{ BASE_URL_RELATIVE + item.avatar }}" onerror="this.src='images/no-photo-2.png';">
+          </div>
+          <div class="width-100-percentage">
+            <h5 class="font-size-medium width-100-percentage text-align-left"><b>{{ item.cant }}</b> {{ item.name }} {{ item.measure }}{{ item.unit_measurement }}</h5>
+          </div>
+          <div class="padding-left-10">
+            <h4 class="color-black font-weight-bold text-align-right">{{ formatPrice(item.price) }}<br><sup>MXN</sup></h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+
+  <md-button class="btn-back" ng-click="closeModalViewDetailItem()" aria-label="Settings">
+    <img src="images/icons/close-2.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+</ion-modal-view>

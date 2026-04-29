@@ -1,0 +1,39 @@
+<ion-modal-view class="background-base-popover">
+
+  <ion-content class="complete-payment-store-content" scroll="false">
+
+    <div ng-if="user.send_info === false" class="complete-record-content">
+      <img src="images/warning.png" class="float_anim width-100"/>
+      <h4 class="complete-record-h4">
+        {{ "COMPLETE_RECORD_LBL_1" | translate }}
+      </h4>
+      <center>{{ "COMPLETE_RECORD_LBL_2" | translate }}</center>
+      <br><br><br>
+      <div class="complete-record-content-div">
+        <md-button ng-click="openCompleteRecord()" class="btn1-block md-button-black-container">
+          {{ "COMPLETE_RECORD_LBL_3" | translate }}
+        </md-button>
+      </div>
+    </div>
+
+    <div ng-if="user.send_info === true" class="complete-record-ok">
+      <img src="images/info.png" class="float_anim width-100"/>
+      <h4 class="complete-record-h4">
+        {{ "COMPLETE_RECORD_LBL_4" | translate }}
+      </h4>
+      <center>{{ "COMPLETE_RECORD_LBL_5" | translate }}</center>
+      <br><br><br>
+      <div class="complete-record-content-div">
+        <md-button ng-click="closeModalCompleteRecord()" class="btn1-block md-button-black-container">
+          {{ "CONTINUE" | translate }}
+        </md-button>
+      </div>
+    </div>
+
+  </ion-content>
+
+  <<md-button class="btn-back" ng-click="closeModalCompleteRecord()" aria-label="Settings">
+    <img src="images/icons/close-2.png" class="toolbar-header-button-img"/>
+  </md-button>-->
+
+</ion-modal-view>

@@ -1,0 +1,94 @@
+<ion-modal-view class="background-base-popover">
+
+  <ion-content class="amount-ion-content code-access-header" scroll="false">
+
+    <div class="step-register code-access-padding-step">
+      {{ "CODE_ACCESS_LBL_1" | translate }}
+      <br><br>
+      <label class="register-subtitle">
+        {{ "CODE_ACCESS_LBL_2" | translate }}
+      </label>
+      <br>
+      <div ng-if="flag_code_access == true" class="code-access-title">
+        <label class="margin-0">
+          {{ "CODE_ACCESS_LBL_3" | translate }} {{ EXPIRE_ACCESS_CODE }} {{ "CODE_ACCESS_LBL_4" | translate }}&nbsp;
+        </label>
+        <br>
+        <p class="code-access-expire-info">
+          &nbsp;{{ expire_time_info }}&nbsp;
+        </p>
+      </div>
+
+      <p ng-if="flag_code_access == false" class="code-access-expire-time">
+        {{ "CODE_ACCESS_LBL_5" | translate }}
+      </p>
+      <br>
+      <label ng-if="flag_code_access == true" class="register-subtitle">
+        ¡{{ "CODE_ACCESS_LBL_6" | translate }}
+      </label>
+
+    </div>
+
+    <div ng-if="flag_code_access == false" class="code-access-no-found">
+      <img src="images/svg/no-found.svg" width="150px">
+      <br><br><br>
+      <p class="code-access-no-found-expire-p">
+        {{ "CODE_ACCESS_LBL_7" | translate }} <b class="code-access-no-found-expire-p-b">{{ "CODE_ACCESS_LBL_8" | translate }}</b>
+      </p>
+      <br>
+      <md-button class="btn-normal" ng-click="newCodeAccess()" aria-label="Settings">
+        <img src="images/icons/mail.png" class="toolbar-header-button-img animPulse"/>
+      </md-button>
+    </div>
+    <div ng-if="flag_code_access == false" class="height-100"></div>
+
+    <div ng-if="flag_code_access == true">
+
+      <div class="amount-div-keyboardAmount-numbers">
+        <b class="code_b">{{ (code_access.length >= 1 ? code_access.substring(0, 1) : '') }}</b>
+        <b class="code_b">{{ (code_access.length >= 2 ? code_access.substring(2, 1) : '') }}</b>
+        <b class="code_b">{{ (code_access.length >= 3 ? code_access.substring(3, 2) : '') }}</b>
+        <b class="code_b">{{ (code_access.length >= 4 ? code_access.substring(4, 3) : '') }}</b>
+        <b class="code_b">{{ (code_access.length >= 5 ? code_access.substring(5, 4) : '') }}</b>
+        <b class="code_b">{{ (code_access.length >= 6 ? code_access.substring(6, 5) : '') }}</b>
+      </div>
+
+    </div>
+
+    <div ng-if="flag_code_access == true" class="code-access-keyboard">
+
+      <div class="amount-div-keyboardAmount-numbers">
+        <md-button ng-click="keyboardCode('1')" class="btn1-block amount-button-white-container">1</md-button>
+        <md-button ng-click="keyboardCode('2')" class="btn1-block amount-button-white-container">2</md-button>
+        <md-button ng-click="keyboardCode('3')" class="btn1-block amount-button-white-container">3</md-button>
+      </div>
+
+      <div class="amount-div-keyboardAmount-numbers">
+        <md-button ng-click="keyboardCode('4')" class="btn1-block amount-button-white-container">4</md-button>
+        <md-button ng-click="keyboardCode('5')" class="btn1-block amount-button-white-container">5</md-button>
+        <md-button ng-click="keyboardCode('6')" class="btn1-block amount-button-white-container">6</md-button>
+      </div>
+
+      <div class="amount-div-keyboardAmount-numbers">
+        <md-button ng-click="keyboardCode('7')" class="btn1-block amount-button-white-container">7</md-button>
+        <md-button ng-click="keyboardCode('8')" class="btn1-block amount-button-white-container">8</md-button>
+        <md-button ng-click="keyboardCode('9')" class="btn1-block amount-button-white-container">9</md-button>
+      </div>
+
+      <div class="amount-div-keyboardAmount-numbers">
+        <md-button class="btn1-block amount-button-white-container code-access-keyboard-delete"></md-button>
+        <md-button ng-click="keyboardCode('0')" class="btn1-block amount-button-white-container">0</md-button>
+        <md-button ng-click="keyboardCode('-1')" class="btn1-block amount-button-white-container amount-btn-delete">
+          <img src="images/borrar.png" height="20px">
+        </md-button>
+      </div>
+      <br><br>
+
+    </div>
+
+  </ion-content>
+  <md-button class="btn-back" ng-click="closeModalCodeAccess()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+</ion-modal-view>

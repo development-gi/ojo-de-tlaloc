@@ -1,0 +1,650 @@
+/* Cards */
+
+.animCard {
+  animation: animCard 2s ease 0s infinite alternate-reverse forwards;
+}
+@keyframes animCard {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.myAnim {
+  animation: myAnim 3s ease 0s infinite normal forwards;
+}
+
+@keyframes myAnim {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.myAnim2 {
+  animation: myAnim2 4s ease 0s infinite alternate-reverse forwards;
+}
+
+@keyframes myAnim2 {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Fade */
+.animFade {
+  animation: myAnimFade 1s ease 0s 1 normal forwards;
+}
+@keyframes myAnimFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animFade2 {
+  animation: myAnimFade2 1s ease 0s 1 normal forwards;
+}
+@keyframes myAnimFade2 {
+  0% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Blink */
+.animBlink {
+  animation: myAnimBlink 1s ease 0s 1 normal forwards;
+}
+@keyframes myAnimBlink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animBlinkInfinite {
+  animation: myAnimBlinkInfinite 2s ease 0s infinite normal forwards;
+}
+@keyframes myAnimBlinkInfinite {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Pulsar */
+
+.pulse3 {
+  animation: myAnimPulse3 2s ease 0s 3 normal forwards;
+}
+@keyframes myAnimPulse3 {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
+.animPulse {
+  animation: myAnimPulse 2s ease 0s infinite normal forwards;
+}
+@keyframes myAnimPulse {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+.heart-select {
+  animation: heartAnim 2s ease 0s 1 normal forwards;
+}
+@keyframes heartAnim {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
+/* Estirar */
+.animSave {
+  animation: myAnimSave 2s ease 0s infinite normal forwards;
+}
+@keyframes myAnimSave {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* Rotación */
+.rotate_normal {
+  animation: rotation_normal 1s ease 0s 1 normal forwards;
+}
+@keyframes rotation_normal {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.rotate {
+  animation: rotation 1s ease 0s 1 normal forwards;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+.rotate_left_infinite {
+  animation: rotation_left_infinite 1s ease 0s infinite normal forwards;
+}
+@keyframes rotation_left_infinite {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.rotate_infinite {
+  animation: rotation_infinite 3s ease 0s infinite normal forwards;
+}
+@keyframes rotation_infinite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* Columpio */
+.swing {
+  animation: swing_frame 3s ease 0s infinite normal forwards;
+}
+@keyframes swing_frame {
+  0%, 100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 0;
+  }
+
+  10% {
+    transform: rotate(2deg);
+  }
+
+  20%, 40%, 60% {
+    transform: rotate(-4deg);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(4deg);
+  }
+
+  80% {
+    transform: rotate(-2deg);
+  }
+
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+.itzaPaySwing {
+  animation: itzaPaySwing_frame 3s ease 0s 1 normal forwards;
+}
+@keyframes itzaPaySwing_frame {
+  0%, 100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 0;
+  }
+
+  10% {
+    transform: rotate(2deg);
+  }
+
+  20%, 40%, 60% {
+    transform: rotate(-4deg);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(4deg);
+  }
+
+  80% {
+    transform: rotate(-2deg);
+  }
+
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+/* Flotante */
+.float_anim {
+  animation: myAnimFloat 6s ease 0s infinite normal forwards;
+}
+@keyframes myAnimFloat {
+  0% {
+    transform: translate(0);
+  }
+
+  10% {
+    transform: translate(-2px, -2px);
+  }
+
+  20% {
+    transform: translate(2px, -2px);
+  }
+
+  30% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(2px, 2px);
+  }
+
+  50% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, -2px);
+  }
+
+  70% {
+    transform: translate(-2px, 2px);
+  }
+
+  80% {
+    transform: translate(-2px, -2px);
+  }
+
+  90% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Down */
+.down-search {
+  animation: downSearchAnim 3s ease 0s infinite normal forwards;
+}
+@keyframes downSearchAnim {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateY(8px);
+  }
+
+  80% {
+    transform: translateY(6.4px);
+  }
+
+  90% {
+    transform: translateY(-6.4px);
+  }
+}
+
+/* Spinner*/
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@-moz-keyframes spin_config { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin_config { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin_config { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.spinner_ {
+  -webkit-animation:spin 1s linear infinite;
+  -moz-animation:spin 1s linear infinite;
+  animation:spin 1s linear infinite;
+}
+.spinner_config {
+  -webkit-animation:spin 2s linear infinite;
+  -moz-animation:spin 2s linear infinite;
+  animation:spin 2s linear infinite;
+}
+
+/* Next */
+.next_properties {
+  animation: next_propertiesAnim 3s ease 0s infinite normal forwards;
+}
+@keyframes next_propertiesAnim {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+
+  10% {
+    transform: rotate(2deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+
+  80% {
+    transform: rotate(-2deg);
+  }
+
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+.fade_out {
+  animation: myAnimFadeOut 1s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnimFadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+.fade_in {
+  animation: myAnimFadeIn 1s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnimFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.bounce-out-forward {
+  animation: myAnimBounceOutForward 1s ease 1s 1 normal forwards;
+}
+
+@keyframes myAnimBounceOutForward {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+
+  5% {
+    animation-timing-function: ease-in;
+    transform: scale(1.04);
+  }
+
+  15% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+
+  25% {
+    animation-timing-function: ease-in;
+    transform: scale(1.24);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+
+  52% {
+    animation-timing-function: ease-in;
+    transform: scale(1.5);
+  }
+
+  70% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: scale(7);
+  }
+}
+
+.shake-horizontal {
+  animation: myAnimShakeHorizontal 7s ease 0s infinite normal forwards;
+}
+
+@keyframes myAnimShakeHorizontal {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(10px);
+  }
+
+  80% {
+    transform: translateX(8px);
+  }
+
+  90% {
+    transform: translateX(-8px);
+  }
+}
+
+/*efecto shimmer*/
+.div-shimmer {
+  height: 100px;
+  width: 300px;
+  background: linear-gradient(to right, #f4f4f4 40%, #fafafa 50%, #f4f4f4 60%);
+  background-size: 300%;
+  background-position-x: 100%;
+  animation: shimmer 7s infinite linear;
+}
+.stroke {
+  height: 15px;
+  background: #777;
+  margin-top: 20px;
+}
+.animate-stroke {
+  animation: shimmer 3s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+  background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -1000px 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
+}

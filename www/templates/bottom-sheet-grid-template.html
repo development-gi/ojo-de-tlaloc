@@ -1,0 +1,33 @@
+
+<md-bottom-sheet class="md-grid" layout="column">
+  <div layout="row" layout-align="center center" ng-cloak>
+    <md-toolbar class="md-whiteframe-2dp" style="background: transparent; box-shadow: none">
+      <div class="md-toolbar-tools">
+
+        <h2 style="color: #000;" class="view-title position-name" flex md-truncate>{{title}}</h2>
+
+        <md-button class="md-icon-button" ng-click="listItemClick(null, null)" aria-label="Settings">
+          <md-icon md-font-set="material-icons" style="color:#000">&#xE5CD</md-icon>
+        </md-button>
+
+      </div>
+    </md-toolbar>
+  </div>
+  <div ng-cloak>
+    <md-list flex layout="row" layout-align="center center">
+
+      <div class="col" style="width: 50%" ng-repeat="item in items">
+        <md-card style="background-color: transparent; box-shadow: none">
+          <md-card-content ng-click="listItemClick($index, $event)">
+            <div style="width: 100%!important; height: 60px; text-align: center; line-height: 115%">
+              <md-icon md-svg-src="{{item.icon}}"></md-icon><br/>
+              <p style="color: #000; line-height: 115%">{{ item.name }}</p>
+            </div>
+          </md-card-content>
+        </md-card>
+      </div>
+
+    </md-list>
+
+  </div>
+</md-bottom-sheet>

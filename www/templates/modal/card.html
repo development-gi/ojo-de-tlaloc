@@ -1,0 +1,201 @@
+<ion-modal-view class="background-base-popover">
+
+  <ion-content scroll="true" class="div-ion-content">
+
+    <div class="padding-10">
+
+      <div class="card-new-div-design">
+        <md-card md-theme="default" md-theme-watch class="card-new-card">
+
+          <md-card-content class="card-new-card-content">
+            <img ng-src="{{card_img}}" class="animCard card-new-card-content-img">
+          </md-card-content>
+
+          <div class="card-new-card-content-number">
+            {{ dataPayment.number }}
+          </div>
+
+          <div class="card-new-card-content-valid">
+            {{ "CARD_LBL_1" | translate }}
+          </div>
+          <div class="card-new-card-content-m-y">
+            {{ dataPayment.exp_month }}/{{ dataPayment.exp_year }}
+          </div>
+
+          <div class="card-new-card-content-name">
+            {{ dataPayment.name }} {{ dataPayment.lastname }}
+          </div>
+
+        </md-card>
+      </div>
+
+      <md-subheader class="md-no-sticky card-new-subheader-card">
+        {{ "CARD_LBL_2" | translate }}
+      </md-subheader>
+      <md-input-container class="md-block border-color-base color-base card-new-input-container" flex-gt-sm
+                          md-theme="alt">
+        <input type="text" class="cajitas" ng-model="dataPayment.name" maxlength="23">
+      </md-input-container>
+      <br>
+      <md-subheader class="md-no-sticky card-new-subheader-card">
+        {{ "CARD_LBL_7" | translate }}
+      </md-subheader>
+      <md-input-container class="md-block border-color-base color-base card-new-input-container" flex-gt-sm
+                          md-theme="alt">
+        <input type="text" class="cajitas" ng-model="dataPayment.lastname" maxlength="23">
+      </md-input-container>
+      <br>
+      <md-subheader class="md-no-sticky card-new-subheader-card">
+        {{ "CARD_LBL_3" | translate }}
+      </md-subheader>
+      <md-input-container class="md-block border-color-base color-base card-new-input-container" flex-gt-sm
+                          md-theme="alt">
+        <input id="icard" type="text" ng-keyup="format_card()" onkeypress="return validanumero(event);"
+               class="cajitas" ng-model="dataPayment.number" maxlength="19">
+      </md-input-container>
+      <br>
+      <table>
+        <tr>
+          <td class="width-33-percentage">
+            <md-subheader class="md-no-sticky card-new-subheader">
+              {{ "MONTH" | translate }}<sup>(MM)</sup>
+            </md-subheader>
+            <md-input-container class="md-block border-color-base color-base card-new-input-container" flex-gt-sm
+                                md-theme="alt">
+              <input type="tel" onkeyup="return validanumero(event);" class="cajitas" ng-model="dataPayment.exp_month"
+                     maxlength="2">
+            </md-input-container>
+          </td>
+          <td class="width-33-percentage">
+            <md-subheader class="md-no-sticky card-new-subheader">
+              {{ "YEAR" | translate }}<sup>({{ "CARD_LBL_4" | translate }})</sup>
+            </md-subheader>
+            <md-input-container class="md-block border-color-base color-base card-new-input-container" flex-gt-sm
+                                md-theme="alt">
+              <input type="tel" onkeyup="return validanumero(event);" class="cajitas" ng-model="dataPayment.exp_year"
+                     maxlength="4">
+            </md-input-container>
+          </td>
+          <td class="width-33-percentage">
+            <md-subheader class="md-no-sticky card-new-subheader">
+              CVV
+            </md-subheader>
+            <md-input-container class="md-block border-color-base color-base card-new-input-container" flex-gt-sm
+                                md-theme="alt">
+              <input type="tel" onkeyup="return validanumero(event);" class="cajitas" ng-model="dataPayment.cvc"
+                     maxlength="4">
+            </md-input-container>
+          </td>
+        </tr>
+      </table>
+      <div>
+        <table class="width-100-percentage">
+          <tr>
+            <td class="width-50-percentage">
+              <md-subheader class="md-no-sticky card-new-subheader">{{ "REGISTER_COMPLETE_RECORD_LBL_7" | translate }}
+              </md-subheader>
+              <div class="margin-left-12 margin-right-12">
+                <md-input-container class="md-block border-color-base color-base margin-0" flex-gt-sm md-theme="alt">
+                  <input type="tel" aria-label="ShowHideAccountant" ng-model="dataPayment.postal_code"
+                         ng-change="search_cp(dataPayment.postal_code)" maxlength="5">
+                </md-input-container>
+              </div>
+            </td>
+            <td class="width-50-percentage">
+            </td>
+          </tr>
+        </table>
+
+        <md-subheader class="md-no-sticky card-new-subheader">{{ "REGISTER_COMPLETE_RECORD_LBL_8" | translate }}
+        </md-subheader>
+        <md-input-container class="md-block border-color-base card-new-input-container" flex-gt-sm md-theme="alt">
+          <md-select aria-label="ShowHideAccountant" ng-model="dataPayment.state">
+            <md-option ng-repeat="item in sepomex_state" ng-value="item">
+              {{ item }}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <br>
+        <md-subheader class="md-no-sticky card-new-subheader">{{ "REGISTER_COMPLETE_RECORD_LBL_9" | translate }}
+        </md-subheader>
+        <md-input-container class="md-block border-color-base card-new-input-container" flex-gt-sm md-theme="alt">
+          <md-select aria-label="ShowHideAccountant" ng-model="dataPayment.city">
+            <md-option ng-repeat="item in sepomex_cities" ng-value="item">
+              {{ item }}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <br>
+        <md-subheader class="md-no-sticky card-new-subheader">{{ "REGISTER_COMPLETE_RECORD_LBL_10" | translate }}
+        </md-subheader>
+        <md-input-container class="md-block border-color-base card-new-input-container" flex-gt-sm md-theme="alt">
+          <md-select aria-label="ShowHideAccountant" ng-model="dataPayment.colony">
+            <md-option ng-repeat="item in sepomex_colonies" ng-value="item">
+              {{ item }}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <br>
+        <md-subheader class="md-no-sticky card-new-subheader">{{ "REGISTER_COMPLETE_RECORD_LBL_11" | translate }}
+        </md-subheader>
+        <div class="margin-left-12 margin-right-12">
+          <md-input-container class="md-block border-color-base color-base margin-0" flex-gt-sm md-theme="alt">
+            <input type="text" aria-label="ShowHideAccountant" ng-blur="blurInput()"
+                   ng-model="dataPayment.street" maxlength="100">
+          </md-input-container>
+        </div>
+
+        <table class="width-100-percentage">
+          <tr>
+            <td class="width-50-percentage">
+              <md-subheader class="md-no-sticky card-new-subheader">{{ "REGISTER_COMPLETE_RECORD_LBL_12" | translate }}
+              </md-subheader>
+              <div class="margin-left-12 margin-right-12">
+                <md-input-container class="md-block border-color-base color-base margin-0" flex-gt-sm md-theme="alt">
+                  <input type="text" aria-label="ShowHideAccountant" ng-blur="blurInput()"
+                         ng-model="dataPayment.number_exterior" maxlength="25">
+                </md-input-container>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <md-subheader class="md-no-sticky card-new-subheader">
+        {{ "CARD_NEW_LBL_4" | translate }}
+      </md-subheader>
+      <md-input-container class="md-block border-color-base color-base card-new-input-container" flex-gt-sm
+                          md-theme="alt">
+        <input type="email" class="cajitas background-color-transparent"
+               ng-model="dataPayment.email" maxlength="50">
+      </md-input-container>
+      <br>
+      <md-subheader class="md-no-sticky card-new-subheader">
+        {{ "CARD_NEW_LBL_1" | translate }}
+      </md-subheader>
+      <md-input-container class="md-block border-color-base color-base card-new-input-container" flex-gt-sm
+                          md-theme="alt">
+        <input type="tel" onkeyup="return validanumero(event);" class="cajitas" ng-model="dataPayment.phone"
+               maxlength="10">
+      </md-input-container>
+      <br>
+
+    </div>
+
+    <br><br>
+
+    <div class="card-new-div-btn">
+      <md-button ng-click="setRecharge($event)" class="btn1-block md-button-black-container">
+        {{ "CARD_LBL_5" | translate }}
+      </md-button>
+    </div>
+    <br>
+    <br>
+  </ion-content>
+  <md-button class="btn-back" ng-click="closeModalCard()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+  <div class="toolbar-header-title">
+    <h3>{{ "CARD_LBL_6" | translate }}</h3>
+  </div>
+
+</ion-modal-view>

@@ -1,0 +1,37 @@
+<ion-modal-view class="background-white">
+
+  <ion-content class="top-56" scroll="true">
+    <div class="mounts-container">
+
+      <!-- Lista de Subcategorías -->
+      <div class="list">
+        <label class="item item-input item-select">
+          <div class="input-label">
+            {{ "COMPANY_AMOUNTS_LBL_1" | translate }}
+          </div>
+          <select ng-model="selectedSubCategory" ng-options="subCategory as subCategory for (subCategory, services) in organizedServicesForSelectedCompany">
+            <option value="">{{ "COMPANY_AMOUNTS_LBL_2" | translate }}</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Lista de Servicios para la Subcategoría Seleccionada -->
+      <div class="card" ng-repeat="service in organizedServicesForSelectedCompany[selectedSubCategory]" ng-click="selectServiceAndCloseModal(service)">
+        <div class="item item-text-wrap">
+          {{service.price}}
+          {{service.description}}
+        </div>
+      </div>
+
+    </div>
+  </ion-content>
+
+  <md-button class="btn-back" ng-click="closeModalCompanyAmounts()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+  <div class="toolbar-header-title">
+    <h3>{{ "COMPANY_AMOUNTS_LBL_3" | translate }}: {{selectedCompanyInfo.operator}}</h3>
+  </div>
+
+</ion-modal-view>

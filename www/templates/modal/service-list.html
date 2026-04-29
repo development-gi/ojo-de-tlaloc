@@ -1,0 +1,21 @@
+<ion-modal-view class="background-white">
+
+  <ion-content class="complete-payment-store-content" scroll="true">
+
+    <div class="card" ng-repeat="service in filteredServices" ng-click="selectServiceAndCloseModal(service)">
+      <div class="item item-text-wrap">
+        {{service.operator}}
+      </div>
+    </div>
+
+  </ion-content>
+
+  <md-button class="btn-back" ng-click="closeModalServiceList()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+  <div class="toolbar-header-title">
+    <h3>{{ "SERVICE_LIST_LBL_1" | translate }}</h3>
+  </div>
+
+</ion-modal-view>

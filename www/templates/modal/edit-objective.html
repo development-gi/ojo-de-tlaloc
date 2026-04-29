@@ -1,0 +1,55 @@
+<ion-modal-view class="edit-target-modal">
+
+  <!-- TOOLBAR (SIN CAMBIOS) -->
+  <md-toolbar class="tlaloc-header-modal">
+    <div class="md-toolbar-tools">
+      <span style="width:40px;"></span>
+      <h2 class="toolbar-title-modules">
+        Actualizar Objetivo
+      </h2>
+      <span flex></span>
+      <md-button class="md-icon-button"
+                 ng-click="closeModalEditObjective()"
+                 aria-label="Close">
+        <img src="images/new/arrow-down.svg"
+             class="toolbar-icon">
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <!-- CONTENIDO -->
+  <ion-content class="edit-target-content" style="top: 57px;">
+
+    <!-- CARD: Información básica -->
+    <md-card class="form-card">
+      <md-card-content class="modal-card-content">
+        <label class="form-label">Nombre del Objetivo</label>
+        <input type="text"
+               class="form-input"
+               ng-model="editObjectiveData.name"
+               placeholder="Nombre del Objetivo">
+        <label class="form-label">Género</label>
+        <select class="form-select"
+                ng-model="editObjectiveData.gender">
+          <option value="0">Mujer</option>
+          <option value="1">Hombre</option>
+          <option value="2">Otro</option>
+        </select>
+        <label class="form-label">Fecha de nacimiento</label>
+        <input type="date"
+               class="form-input"
+               ng-model="editObjectiveData.birthdayDate">
+      </md-card-content>
+    </md-card>
+
+    <!-- GUARDAR -->
+    <div class="save-container">
+      <button class="save-button"
+              ng-click="saveEditTarget()">
+        Guardar información
+      </button>
+    </div>
+
+  </ion-content>
+
+</ion-modal-view>

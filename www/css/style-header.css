@@ -1,0 +1,92 @@
+.toolbar-header-title {
+  color: black !important;
+  text-align: center !important;
+  z-index: 12345 !important;
+  position: fixed;
+  width: 100%;
+  margin-top: 13px;
+  vertical-align: middle !important;
+  min-height: 20px !important;
+  height: 31px !important;
+}
+
+.btn-back {
+  z-index: 1234567 !important;
+  position: fixed !important;
+  border: 2px solid #EDEDED;
+  border-radius: 8px !important;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  margin: 3px 8px!important;
+  top: 8px!important;
+  background-color: #ECECEC!important;
+}
+
+.btn-up {
+  z-index: 1234567!important;
+  position: fixed !important;
+  border: 2px solid #EDEDED!important;
+  border-radius: 8px !important;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  margin: 3px 8px !important;
+  background-color: #EDEDED!important;
+
+  bottom: 20px!important;
+  right: 10px!important;
+}
+
+.btn-info-plus {
+  z-index: 1234567!important;
+  position: fixed !important;
+  border: 2px solid rgb(163, 36, 70) !important;
+  border-radius: 8px !important;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  margin: 3px 8px !important;
+  background-color: rgb(163, 36, 70) !important;
+
+  bottom: 20px!important;
+  right: 10px!important;
+}
+
+.btn-right-search2 {
+  z-index: 1234567 !important;
+  position: fixed!important;
+  border: 2px solid #EDEDED;
+  margin-top: 4px !important;
+  right: 45px!important;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px!important;
+  display: flex;
+  top: 8px!important;
+  background-color: #ECECEC !important;
+}
+
+.toolbar-header-button-img {
+  margin-top: calc(50% - 12px);
+  margin-left: calc(50% - 12px);
+  width: 24px;
+}
+
+.btn-right {
+  z-index: 1234567 !important;
+  position: fixed!important;
+  border: 2px solid #EDEDED;
+  right: 2px!important;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px!important;
+  margin: 3px 8px!important;
+  display: flex;
+  top: 8px!important;
+  background-color: #ECECEC !important;
+}
+
+.border-radius-8 {
+  border-radius: 8px !important;
+}

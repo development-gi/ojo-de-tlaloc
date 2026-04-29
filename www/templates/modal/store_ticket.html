@@ -1,0 +1,62 @@
+<ion-modal-view class="background-base-popover">
+
+  <ion-content scroll="true" class="oxxo-ion-content">
+    <div class="oxxo-div-padding oxxo-div-center oxxo-div-code">
+
+      <img src="images/stores/paynet.webp" class="paynet-logo">
+
+      {{ "PAYNET_MODAL_LBL_1" | translate }}
+
+      <img ng-src="{{qr_paynet}}">
+
+      <h4 class="oxxo-reference">
+        {{reference_paynet}}
+      </h4>
+
+      {{ "PAYNET_MODAL_LBL_2" | translate }}
+
+      <h3 class="oxxo-reference">
+        {{ formatPrice(amount_select) }}<sup>MXN</sup>
+      </h3>
+
+      {{ "PAYNET_MODAL_LBL_3" | translate }}
+
+      <label class="oxxo-comission">
+        {{ "PAYNET_MODAL_LBL_4" | translate }}
+      </label>
+    </div>
+
+    <div class="oxxo-div-padding">
+      <b>{{ "PAYNET_MODAL_LBL_5" | translate }} </b><br><br>
+      <div class="oxxo-div-steps">
+        <b class="oxxo-div-steps-number">1</b>
+        <div>&nbsp;{{ "PAYNET_MODAL_LBL_6" | translate }} </div>
+      </div>
+      <div class="oxxo-div-steps">
+        <b class="oxxo-div-steps-number">2</b>
+        <div>&nbsp;{{ "PAYNET_MODAL_LBL_7" | translate }} <b>{{ "PAYNET_MODAL_LBL_8" | translate }}</b></div>
+      </div>
+      <div class="oxxo-div-steps">
+        <b class="oxxo-div-steps-number">3</b>
+        <div>&nbsp;{{ "PAYNET_MODAL_LBL_9" | translate }}</div>
+      </div>
+      <div class="oxxo-div-steps">
+        <b class="oxxo-div-steps-number">4</b>
+        <div>&nbsp;{{ "PAYNET_MODAL_LBL_10" | translate }}</div>
+      </div>
+      <div class="oxxo-div-steps">
+        <b class="oxxo-div-steps-number">5</b>
+        <div>&nbsp;{{ "PAYNET_MODAL_LBL_11" | translate }}</div>
+      </div>
+    </div>
+
+  </ion-content>
+
+  <md-button class="btn-back" ng-click="closeModalStore_ticket()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+  <div class="toolbar-header-title">
+    <h3>{{ "OXXO_MODAL_LBL_12" | translate }}</h3>
+  </div>
+
+</ion-modal-view>

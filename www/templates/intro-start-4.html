@@ -1,0 +1,164 @@
+<ion-view>
+
+  <style>
+
+    .swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+      left: 30px;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    .swiper-pagination-bullet {
+      width: 30px;
+      height: 4px;
+      display: inline-block;
+      border-radius: 10px;
+      background: #000;
+    }
+
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+      -webkit-transform: scale(.66);
+      -ms-transform: scale(.66);
+      transform: scale(.66);
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      top: 3px;
+    }
+
+    .div-title-step {
+      font-family: 'Quicksand-Regular';
+      color: #1a0039;
+      font-size: 27px;
+      line-height: 110% !important;
+      text-align: left;
+      width: 80%;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 50px;
+    }
+
+    .div-text-step {
+      font-family: 'Quicksand-Regular';
+      color: #1e1e1e;
+      font-size: 17px;
+      line-height: 130% !important;
+      text-align: justify;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+  </style>
+
+  <ion-content scroll="false" class="fade-in-center div-content" style="background: #FAFAFA!important;">
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+
+          <div class="div-slide-step">
+
+            <div style="height: 65%!important; background: grey; width: 100%">
+              ---
+            </div>
+
+            <div style="height: 35%!important;">
+              <div class="div-title-step color-black font-weight-bold">
+                Lorem
+                Lorem Ipsum
+              </div><br>
+              <div class="div-text-step">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="swiper-slide">
+
+          <div class="div-slide-step">
+
+            <div style="height: 65%!important; background: grey; width: 100%">
+              ---
+            </div>
+
+            <div style="height: 35%!important;">
+              <div class="div-title-step color-black font-weight-bold">
+                Lorem
+                Lorem Ipsum
+              </div><br>
+              <div class="div-text-step">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="swiper-slide">
+
+          <div class="div-slide-step">
+
+            <div style="height: 65%!important; background: grey; width: 100%">
+              ---
+            </div>
+
+            <div style="height: 35%!important;">
+              <div class="div-title-step color-black font-weight-bold">
+                Lorem
+                Lorem Ipsum
+              </div><br>
+              <div class="div-text-step">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="swiper-slide">
+
+          <div class="div-slide-step">
+
+            <div style="height: 65%!important; background: grey; width: 100%">
+              ---
+            </div>
+
+            <div style="height: 35%!important;">
+              <div class="div-title-step color-black font-weight-bold">
+                Lorem
+                Lorem Ipsum
+              </div><br>
+              <div class="div-text-step">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="div-footer-intro">
+      <label ng-if="realIndexSwiper == 1" class="color-grey font-weight-bold"></label>
+      <label ng-if="realIndexSwiper > 1" class="color-grey font-weight-bold"></label>
+
+      <md-button ng-if="realIndexSwiper < swiper.slides.length" ng-click="next_intro()" class="md-fab md-primary" aria-label="Use Android">
+        <img src="images/icons/next-white.png" class="toolbar-header-button-img"/>
+      </md-button>
+
+      <md-button ng-if="realIndexSwiper == swiper.slides.length" ng-click="gologin()" class="md-fab md-primary" aria-label="Use Android">
+        <img src="images/icons/check-white.png" class="toolbar-header-button-img"/>
+      </md-button>
+
+    </div>
+
+  </ion-content>
+</ion-view>

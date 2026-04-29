@@ -1,0 +1,83 @@
+<ion-modal-view class="let-background-base-header">
+  <ion-content scroll="false" overflow-scroll="false">
+
+    <div class="let-div-user-background">
+      <img ng-src="{{avatar}}" onerror="this.onerror=null;this.src='images/user.png';"/>
+    </div>
+
+    <div class="let-div-user">
+      <div class="let-div-user-container">
+        <img ng-src="{{avatar}}" onerror="this.onerror=null;this.src='images/user.png';"/>
+      </div>
+    </div>
+
+    <div class="let-div-info">
+      <div class="let-div-user-data">
+        <div class="let-div-data-title">
+          <label class="let-label-data">Perteneces al broker: {{ user.name }}</label>
+        </div>
+        <label class="let-label-data-two">Desde {{selectedItem.created_at}}</label>
+      </div>
+      <div class="let-user-card-columns">
+        <h4 class="let-label-config-title">Tú información</h4>
+        <div class="let-div-colum">
+          <div class="let-part">
+            <img src="images/icons/promotor-white.png"/>
+          </div>
+          <div class="let-part">
+            <label class="let-label-config-title">{{ "CONFIG_LBL_2" | translate }}: {{selectedItem.name}}</label>
+          </div>
+        </div>
+        <div class="let-div-colum">
+          <div class="let-part">
+            <img src="images/icons/light-white.png"/>
+          </div>
+          <div class="let-part">
+            <label class="let-label-config-title">Cliente:
+              <span class="let-label-data-two" ng-if="selectedItem.type_person === 'natural'">Persona física</span>
+              <span class="let-label-data-two" ng-if="selectedItem.type_person === 'moral'">Persona moral</span>
+            </label>
+          </div>
+        </div>
+        <div class="let-div-colum">
+          <div class="let-part">
+            <img src="images/icons/mail-white.png"/>
+          </div>
+          <div class="let-part">
+            <label class="let-label-config-title">{{selectedItem.email}}</label>
+          </div>
+        </div>
+        <div class="let-div-colum">
+          <div class="let-part">
+            <img src="images/icons/call-white.png"/>
+          </div>
+          <div class="let-part">
+            <label class="let-label-config-title">{{selectedItem.phone}}</label>
+          </div>
+        </div>
+        <div class="let-div-colum">
+          <div class="let-part">
+            <img src="images/icons/number-white.png"/>
+          </div>
+          <div class="let-part">
+            <label class="let-label-config-title">
+              {{ selectedItem.type_road }}, {{ selectedItem.road_name }}, n<sup>o</sup>. ext {{ selectedItem.no_ext }},
+              <span ng-if="selectedItem.no_int">n<sup>o</sup> int {{ selectedItem.no_int }}</span> entre calles {{ selectedItem.between_streets }},
+              {{ selectedItem.colony }}, {{ selectedItem.municipality }},
+              C.P. {{ selectedItem.postal_code }},
+              {{ selectedItem.state }}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+
+  <md-button class="btn-back" ng-click="closeModalClientInfo()" aria-label="Settings">
+    <img src="images/icons/arrow-down-white.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+  <div class="toolbar-header-title">
+    <h3 class="let-label-config-title">Información del cliente</h3>
+  </div>
+</ion-modal-view>

@@ -1,0 +1,31 @@
+<div class="take-picture-content" style="width: 100%!important;">
+  <div align="center" class="margin-bottom-10">
+    <br>
+    <img src="images/step-4.svg" width="150px">
+    <br>
+    <label class="titulo-modal font-weight-bold primary-text-color">Usa una de tus aplicaciones para navegar hacia la tienda {{ name_store_aux }}</label>
+  </div>
+  <br>
+
+  <div style="overflow-x: scroll!important; max-height: 220px!important;">
+    <md-divider></md-divider>
+    <div ng-repeat="item in arr_apps_navigation">
+      <md-list-item class="md-2-line" ng-click="app_navigation_selected(item)">
+        <img ng-src="{{item.image}}" class="md-avatar" alt="{{item.name}}" />
+        <p class="font-base-regular custom-item-list config-menu-color" style="line-height: 115% !important;">{{ item.name }}</p>
+        <img src="images/icons/arrow-right-grey.png" class="width-24"/>
+      </md-list-item>
+      <md-divider></md-divider>
+    </div>
+  </div>
+
+
+  <br>
+
+  <div class="padding-15">
+    <div align="middle" class="div-boton-alert background-base-btn" ng-click="closePOPAppsNavigation()" >
+      <label class="button texto-boton background-base-btn take-picture-btn">Cerrar</label>
+    </div>
+  </div>
+
+</div>

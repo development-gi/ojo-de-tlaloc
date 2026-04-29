@@ -1,0 +1,328 @@
+/*#a34dff*/
+.width-24 {
+  width: 24px !important;
+}
+
+.customPopup .popup {
+  background-color: transparent !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  -webkit-box-shadow: none !important;;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.myPopup .popup, .popup-body {
+  background-color: transparent !important;
+  padding: 0px !important;
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.myPopup .popup-head {
+  display: none;
+}
+
+.customPopup.popup-body {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.customPopup .popup-head {
+  display: none;
+}
+
+.spinner.spinner-dark {
+  stroke: #002f53;
+  fill: #002f53;
+}
+
+.app_blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.div-boton-alert {
+  border: none !important;
+  margin: 0px;
+  bottom: 0px !important;
+  height: 47px !important;
+  color: white !important;
+  vertical-align: middle;
+}
+
+.background-base-btn {
+  background-color: #002f53 !important;
+  border-radius: 15px !important;
+}
+
+
+/*window dialog*/
+
+md-dialog.md-default-theme, md-dialog {
+  border-radius: 15px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+md-dialog .md-dialog-content {
+  padding: 24px !important;
+}
+
+.md-title {
+  font-size: 20px;
+  letter-spacing: .005em;
+  font-weight: bold;
+}
+
+.md-focused {
+  background-color: transparent !important;
+}
+
+md-dialog .md-actions, md-dialog md-dialog-actions {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  order: 2;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  padding: 10px;
+  min-height: 0px;
+  overflow: hidden;
+}
+
+md-dialog md-dialog-content:not([layout=row]) > :first-child:not(.md-subheader) {
+  margin-top: 0;
+  text-align: center;
+}
+
+md-dialog md-dialog-content .md-dialog-content-body {
+  width: 100%;
+  text-align: center;
+}
+
+/*Estilos Nuevos Said*/
+
+.logo-lb {
+  display: flex;
+  padding: 10px 20px 30px;
+  align-items: center !important;
+}
+
+.logo-lb img {
+  height: 40px;
+}
+
+.logo-lb label {
+  font-size: 15px;
+  color: #000;
+  font-weight: bold;
+}
+
+.background-white {
+  background-color: white !important;
+}
+
+.width-30 {
+  width: 30px;
+}
+
+.login-div {
+  padding: 0px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+
+.login-form .ip-login {
+  height: 35px !important;
+  border-bottom: 2px solid #c7bca5;
+}
+
+.login-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.login-btn .subtitle-lg {
+  color: #002e52 !important;
+  font-weight: bold;
+}
+
+.login-btn .subtitle-lg-gray {
+  color: grey;
+}
+
+.login-btn .btn-star {
+  border-radius: 15px;
+  background-color: #f7a700 !important;
+  color: #fff;
+  width: 200px;
+  font-weight: bold;
+}
+
+.login-btn .btn-outline {
+  border-radius: 15px;
+  border: 1px solid #f7a700;
+  box-shadow: 0 2px 5px 0 rgba(163, 36, 70, 0.34);
+  color: #f7a700;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.margin-top-5 {
+  margin-top: 5px !important;
+}
+
+.login-form .ip-login {
+  height: 35px !important;
+  border-bottom: 0 solid #c7bca5;
+}
+
+.eye {
+  width: 30px;
+  cursor: pointer;
+  margin-top: -31px;
+  float: right !important;
+  margin-right: 10px;
+}
+
+.title-lg {
+  font-size: 25px;
+  color: #002e52;
+  font-weight: bold;
+}
+
+.principal-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invoices-history-welcome {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.invoices-history-welcome-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.principal-avatar-2 {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26) !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 100px !important;
+}
+
+
+.principal-welcome {
+  color: #000000;
+  text-align: center;
+  font-family: 'Quicksand-Regular';
+  font-size: x-large;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-variant: all-small-caps;
+  letter-spacing: 1.68px;
+}
+
+.principal-welcome-name {
+  color: #000000;
+  text-align: center;
+  font-family: 'Quicksand-Regular';
+  font-size: large;
+  line-height: normal;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.menu-btn-edit {
+  width: 17px;
+  height: 17px;
+}
+
+.display-flex {
+  display: flex !important;
+  justify-content: center;
+}
+
+.padding-left-10 {
+  padding-left: 10px !important;
+}
+
+md-card.md-default-theme, md-card {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+.principal-fondo-header {
+  fill: #ffffff !important;
+  background-color: rgb(250, 250, 250) !important;
+}
+
+.btn-logo {
+  z-index: 1234567 !important;
+  position: fixed !important;
+  height: 40px !important;
+  display: flex;
+  margin: 3px 8px !important;
+  background-color: transparent !important;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px !important;
+}
+
+.width-100-percentage {
+  width: 100%;
+}
+
+.width-10-percentage {
+  width: 10%;
+}
+
+.padding-15 {
+  padding: 15px;
+}
+
+/* M A P A */
+#map {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#map_static {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}

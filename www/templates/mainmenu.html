@@ -1,0 +1,174 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-view name="fabContent"></ion-nav-view>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <drawer side="left" style="background-color: #000;">
+
+    <ion-content>
+      <div style="{{styleMapMenu}}">
+        <div class="item placeholder-image" style="border: none; height: 90px; margin-left: 0px!important;padding-left: 0px!important ">
+
+          <div ng-if="acceso == 0" class="row row-center" ng-click="menuoption(3)">
+            <div class="col col-25" align="center">
+              <img ng-src="img/square-face.png" width="50px" height="50px" style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.26); border-radius: 100px; background-color: #fff" />
+            </div>
+            <div class="col">
+              <div class="font-base-regular principal-menu custom-item-list" style="color:#F9FCFD; font-size: 16px">{{'INICIA' | translate}}</div>
+              <div class="font-base-regular custom-item-list" style="color:#D4D5D9;font-size: 12px">{{'AHORA' | translate}}</div>
+            </div>
+          </div>
+
+          <div ng-if="acceso == 1" class="row row-center">
+            <div class="col col-25" align="center">
+              <img ng-src="{{avatarmenu}}" width="50px" height="50px" style="border-radius: 50%; background-color: #fff" />
+            </div>
+            <div class="col">
+              <div class="font-base-regular-bold principal-menu custom-item-list" style="text-overflow:ellipsis; width: 90%; white-space:nowrap; overflow:hidden; color:#F9FCFD;font-size: 16px">{{name_user}}</div>
+              <div class="font-base-regular custom-item-list" style="text-overflow:ellipsis; width: 90%; white-space:nowrap; overflow:hidden; color:#D4D5D9;font-size: 12px">{{email}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="has-header">
+        <div class="list">
+          <div style="border-top: 1px solid #17191a"></div>
+          <div ng-click="goMap()" class="item item-icon-right font-base-regular">
+            <label class="font-base-regular-bold" style="color: #D4D5D9;font-size: 14px">{{'MAPA' | translate}}</label>
+            <i class="icon ion-map muted" style="font-size: 17px; color: #D4D5D9;"></i>
+          </div>
+          <div style="border-top: 1px solid #17191a"></div>
+          <div ng-click="menuoption(6)" class="item item-icon-right font-base-regular">
+            <label class="font-base-regular-bold" style="color: #D4D5D9;font-size: 14px">{{'ENFOCAR' | translate}}</label>
+            <i class="icon ion-aperture muted" style="font-size: 20px; color: #D4D5D9;"></i>
+          </div>
+
+          <div ng-if="isTraffic == false" style="border-top: 1px solid #17191a"></div>
+          <div ng-if="isTraffic == false" ng-click="menuoption(7)" class="item item-icon-right font-base-regular">
+            <label class="font-base-regular-bold" style="color: #D4D5D9;font-size: 14px">{{'VERTRAFICO' | translate}}</label>
+            <i class="icon ion-eye muted" style="font-size: 20px; color: #D4D5D9;"></i>
+          </div>
+
+          <div ng-if="isTraffic == true" style="border-top: 1px solid #17191a"></div>
+          <div ng-if="isTraffic == true" ng-click="menuoption(9)" class="item item-icon-right font-base-regular">
+            <label class="font-base-regular-bold" style="color: #D4D5D9;font-size: 14px">{{'VERTRAFICO2' | translate}}</label>
+            <i class="icon ion-eye-disabled muted" style="font-size: 20px; color: #D4D5D9;"></i>
+          </div>
+
+          <div style="border-top: 1px solid #17191a"></div>
+          <div ng-click="menuoption(4)" class="item item-icon-right font-base-regular">
+            <label class="font-base-regular-bold" style="color: #D4D5D9;font-size: 14px">{{'IDIOMA' | translate}}</label>
+            <i class="icon ion-ios-world-outline muted" style="font-size: 20px; color: #D4D5D9;"></i>
+          </div>
+          <div style="border-top: 1px solid #17191a"></div>
+
+          <div ng-if="acceso == 1">
+            <div ng-click="closeSession()" class="font-base-regular" style="position: relative; z-index: 2; display: block;
+            margin: -1px; padding: 16px; font-size: 16px;width: 100%;">
+              <table style="width: 100%">
+                <tr>
+                  <td>
+                    <label class="font-base-regular-bold" style="color: #D4D5D9;font-size: 14px">{{'CERRAR' | translate}}</label></td>
+                  <td style="text-align: center">
+                    <i class="icon ion-ios-locked-outline muted" style="font-size: 20px; color: #D4D5D9;"></i>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div style="border-top: 1px solid #17191a"></div>
+          </div>
+
+          <!--<div ng-click="menuoption(2)" class="item item-icon-right font-base-regular">
+            <label class="font-base-regular" style="color: #D4D5D9;font-size: 14px">{{'CONFIG' | translate}}</label>
+            <i class="icon ion-ios-gear-outline muted" style="font-size: 20px; color: #D4D5D9;"></i>
+          </div>
+          <div style="border-top: 1px solid #3f4346"></div>-->
+        </div>
+      </div>
+      </div>
+
+      <div ng-if="muestraidioma == 1">
+        <div style="filter: opacity(50%); top: 0px;left:0px; right: 0px; bottom: 0px; text-align: left!important; position: fixed; background-color: #000;"></div>
+
+        <div style="top: 10px;left:10px; text-align: left!important; position: absolute">
+          <div class="md-fab md-mini" style="padding: 0px;margin:0px;">
+            <md-button ng-click="goCloseLanguage()" class="md-fab md-mini" style="padding: 0px;margin:0px;background-color: transparent">
+              <img src='img/close.png' width="20px">
+            </md-button>
+          </div>
+        </div>
+
+        <div class="font-intro-mapa" style="top: 50px; text-align: center!important; width: 100%!important; position: absolute;">
+          <div class="row">
+            <div class="col">
+              <center>
+                <div class="font-intro-mapa-login">{{'IDIOMA' | translate}}</div>
+              </center>
+            </div>
+          </div>
+          <br/>
+
+          <div style="width: 94%">
+            <table style="width: 100%">
+              <tr ng-click="setLanguage(1)">
+                <td style="width: 5%;"></td>
+                <td style="width: 1%">
+                  <div style="border-radius: 50px;">
+                    <img src="img/es.png" style="width: 20px; height: 20px;">
+                  </div>
+                </td>
+                <td style="width: 10%;"></td>
+                <td style="width: 70%; text-align: left; vertical-align: middle">
+                  <label class="font-intro-mapa-light">
+                    {{'LANGUAGEES' | translate}}
+                  </label>
+                </td>
+              </tr>
+              <tr><td colspan="4" style="height: 20px;"></td></tr>
+              <tr ng-click="setLanguage(2)">
+                <td style="width: 5%;"></td>
+                <td style="width: 1%;">
+                  <div style="border-radius: 50px;">
+                    <img src="img/en.png" style="width: 20px; height: 20px;">
+                  </div>
+                </td>
+                <td style="width: 10%;"></td>
+                <td style="width: 70%; text-align: left; vertical-align: middle">
+                  <label class="font-intro-mapa-light">
+                    {{'LANGUAGEEN' | translate}}
+                  </label>
+                </td>
+              </tr>
+            </table>
+            <br/>
+
+            <div class="row">
+              <div class="col">
+                <center>
+                  <div class="font-intro-mapa-invita-light" style="width: 98%; line-height: 115%">{{'LEYENDAIDIOMA' | translate}}</div>
+                </center>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div ng-if="muestraacceso== 1">
+
+      </div>
+
+      <div ng-if="muestraenfoque== 1">
+
+
+      </div>
+
+      <div ng-if="muestraenfoquedetails == 1">
+
+      </div>
+    </ion-content>
+
+  </drawer>
+
+</ion-side-menus>

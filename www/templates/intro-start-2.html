@@ -1,0 +1,210 @@
+<ion-view>
+
+  <style>
+    .swiper-container {
+      width: 100%;
+      height: 90%!important;
+    }
+
+    .div-content-intro-img {
+      top: calc(40% - 250px);
+      position: absolute
+    }
+
+    .swiper-scrollbar-drag {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      background: #6E00E5 !important;
+      border-radius: 10px;
+      left: 0;
+      top: 0;
+    }
+
+    .swiper-container-horizontal>.swiper-scrollbar {
+      position: absolute;
+      left: 1%;
+      bottom: 3px;
+      z-index: 50;
+      height: 2px;
+      width: 98%;
+    }
+
+    .div-img-slide-step {
+      height: 250px!important;
+    }
+
+    .div-img-intro {
+      width: 250px;
+      left: calc(50% - 125px);
+      display: inline-block;
+      position: absolute;
+    }
+
+    .div-title-step {
+      font-family: 'Quicksand-Regular';
+      color: #1a0039;
+      font-size: 25px;
+      line-height: 130% !important;
+      text-align: left;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 15px;
+    }
+
+    .div-text-step {
+      font-family: 'Quicksand-Regular';
+      color: #1e1e1e;
+      font-size: 15px;
+      line-height: 130% !important;
+      text-align: justify;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    .swiper-slide {
+      background: transparent;
+    }
+
+    .background-gradient-content {
+      background: rgb(250,250,250);
+      background: linear-gradient(0deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%);
+    }
+
+  </style>
+
+  <ion-content scroll="false" class="fade-in-center div-content background-gradient-content">
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+
+          <div class="div-slide-step">
+
+            <div style="height: 50%!important;">
+
+              <div style="top: calc(40% - 160px); position: absolute">
+                <div class="div-img-intro">
+                  <img src="images/step-1-1.svg" class="div-img-slide-step float_anim">
+                </div>
+
+                <div class="div-img-intro">
+                  <img src="images/step-1.svg" class="div-img-slide-step">
+                </div>
+              </div>
+
+            </div>
+
+            <div style="height: 50%!important;">
+              <div class="div-title-step color-black font-weight-bold">
+                Lorem Ipsum
+              </div><br>
+              <div class="div-text-step">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-slide">
+
+          <div class="div-slide-step">
+
+            <div style="height: 50%!important;">
+
+              <div style="top: calc(40% - 160px); position: absolute">
+                <div class="div-img-intro">
+                  <img src="images/step-2-1.svg" class="div-img-slide-step float_anim">
+                </div>
+
+                <div class="div-img-intro">
+                  <img src="images/step-2.svg" class="div-img-slide-step">
+                </div>
+
+              </div>
+            </div>
+
+            <div style="height: 50%!important;">
+
+              <div class="div-title-step color-black font-weight-bold">
+                Lorem Ipsum
+              </div><br>
+              <div class="div-text-step">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="swiper-slide">
+
+          <div class="div-slide-step">
+
+            <div style="height: 50%!important;">
+              <div style="top: calc(40% - 160px); position: absolute">
+                <div class="div-img-intro">
+                  <img src="images/step-3-1.svg" class="div-img-slide-step float_anim">
+                </div>
+
+                <div class="div-img-intro">
+                  <img src="images/step-3.svg" class="div-img-slide-step">
+                </div>
+              </div>
+
+            </div>
+            <div style="height: 50%!important;">
+              <div class="div-title-step color-black font-weight-bold">
+                Lorem Ipsum
+              </div><br>
+              <div class="div-text-step">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-slide">
+
+          <div class="div-slide-step">
+
+            <div style="height: 50%!important;">
+
+              <div style="top: calc(40% - 160px); position: absolute">
+                <div class="div-img-intro">
+                  <img src="images/step-4-1.svg" class="div-img-slide-step float_anim">
+                </div>
+
+                <div class="div-img-intro">
+                  <img src="images/step-4.svg" class="div-img-slide-step">
+                </div>
+              </div>
+
+            </div>
+            <div style="height: 50%!important;">
+              <div class="div-title-step color-black font-weight-bold">
+                Lorem Ipsum
+              </div><br>
+              <div class="div-text-step">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Add Scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <div class="div-footer-intro">
+      <label ng-if="realIndexSwiper == 1" class="color-grey font-weight-bold"></label>
+      <label ng-if="realIndexSwiper > 1" ng-click="back_intro()" class="color-grey font-weight-bold">Anterior</label>
+      <label ng-if="realIndexSwiper < swiper.slides.length" ng-click="next_intro()" class="tab-item-2-intro font-weight-bold">Siguiente</label>
+      <label ng-if="realIndexSwiper == swiper.slides.length" ng-click="gologin()" class="tab-item-2-intro font-weight-bold">Comenzar</label>
+    </div>
+
+  </ion-content>
+</ion-view>

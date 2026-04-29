@@ -1,0 +1,139 @@
+<ion-view>
+
+  <ion-content scroll="false" class="fade-in-center div-content" style="background: #FAFAFA!important;">
+
+    <div class="div-header-intro">
+      <label class="color-grey font-weight-bold"><b class="color-black">{{ realIndexSwiper }}</b>/{{ swiper.slides.length }}</label>
+      <label ng-if="realIndexSwiper != swiper.slides.length" ng-click="gologin()" class="color-black font-weight-bold">Saltar</label>
+    </div>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+
+          <div class="div-slide-step">
+
+            <div style="height: 50%!important;">
+
+              <div style="top: calc(40% - 100px); position: absolute">
+                <div class="div-img-intro">
+                  <img src="images/step-1-1.svg" class="div-img-slide-step float_anim">
+                </div>
+
+                <div class="div-img-intro">
+                  <img src="images/step-1.svg" class="div-img-slide-step">
+                </div>
+              </div>
+
+            </div>
+
+            <div style="height: 50%!important;">
+              <div class="div-text-step">
+                Conectamos, organizamos y automatizamos los procesos de instalación de postes de videovigilancia de la alcaldía, mejorando la eficiencia y productividad.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="swiper-slide">
+
+          <div class="div-slide-step">
+
+            <div style="height: 50%!important;">
+
+              <div style="top: calc(40% - 100px); position: absolute">
+                <div class="div-img-intro">
+                  <img src="images/step-2-1.svg" class="div-img-slide-step float_anim">
+                </div>
+
+                <div class="div-img-intro">
+                  <img src="images/step-2.svg" class="div-img-slide-step">
+                </div>
+
+              </div>
+            </div>
+
+            <div style="height: 50%!important;">
+
+              <div class="div-title-step color-black font-weight-bold">
+                Piezas para sobresalir
+              </div><br>
+              <div class="div-text-step">
+                Inteligencia estratégica para tomar decisiones basadas en datos y optimización. Convertimos el análisis en resultados concretos.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="swiper-slide">
+
+          <div class="div-slide-step">
+
+            <div style="height: 50%!important;">
+              <div style="top: calc(40% - 100px); position: absolute">
+                <div class="div-img-intro">
+                  <img src="images/step-3-1.svg" class="div-img-slide-step float_anim">
+                </div>
+
+                <div class="div-img-intro">
+                  <img src="images/step-3.svg" class="div-img-slide-step">
+                </div>
+              </div>
+
+            </div>
+            <div style="height: 50%!important;">
+              <div class="div-title-step color-black font-weight-bold">
+                Todo en uno
+              </div><br>
+              <div class="div-text-step">
+                Diseñada para maximizar resultados, ofreciendo flexibilidad y adaptabilidad, para una sinergia total y flujo de información eficiente, impulsando la toma de decisiones basadas en la información relevante.
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-slide">
+
+          <div class="div-slide-step">
+
+            <div style="height: 50%!important;">
+
+              <div style="top: calc(40% - 100px); position: absolute">
+                <div class="div-img-intro">
+                  <img src="images/step-4-1.svg" class="div-img-slide-step float_anim">
+                </div>
+
+                <div class="div-img-intro">
+                  <img src="images/step-4.svg" class="div-img-slide-step">
+                </div>
+              </div>
+
+            </div>
+            <div style="height: 50%!important;">
+              <div class="div-title-step color-black font-weight-bold">
+                Nada puede vencerte...
+              </div><br>
+              <div class="div-text-step">
+                Descubre cómo podemos mejorar la eficiencia y agilidad.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="div-footer-intro">
+      <label ng-if="realIndexSwiper == 1" class="color-grey font-weight-bold"></label>
+      <label ng-if="realIndexSwiper > 1" ng-click="back_intro()" class="color-grey font-weight-bold">Anterior</label>
+      <label ng-if="realIndexSwiper < swiper.slides.length" ng-click="next_intro()" class="tab-item-2-intro font-weight-bold">Siguiente</label>
+      <label ng-if="realIndexSwiper == swiper.slides.length" ng-click="gologin()" class="tab-item-2-intro font-weight-bold">Comenzar</label>
+    </div>
+
+  </ion-content>
+</ion-view>

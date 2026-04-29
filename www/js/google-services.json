@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "969665881891",
+    "project_id": "ice-breaker-connect-164604"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969665881891:android:976d01d2d94b103e",
+        "android_client_info": {
+          "package_name": "com.ice.breaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969665881891-1bl3lnccpo7qp6mntjr4jqv10kkk5tol.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ice.breaker",
+            "certificate_hash": "36f80a55abb754da1c25ce6a7326d0a34ee83f55"
+          }
+        },
+        {
+          "client_id": "969665881891-b3c4rvuvrssvvrh897jjvhbc6npjrbt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2sAP6Ygun8C3cXXJkGv1AYDQh-mCCF8o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

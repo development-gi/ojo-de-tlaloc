@@ -1,0 +1,49 @@
+<ion-modal-view class="background-white">
+
+  <ion-content scroll="true" overflow-scroll="true" class="list-products-top">
+
+    <div class="products-cont">
+      <div class="products-result">
+        <div ng-if="storeProducts.length == 0">
+          <div class="products-background">
+            <img src="images/products.svg" class="height-100" alt="Logo Principal">
+          </div>
+        </div>
+
+        <div class="products-cards" ng-if="storeProducts.length > 0" ng-repeat="item in storeProducts">
+          <div class="products-info">
+            <div class="product-image">
+              <img ng-src="{{BASE_URL_IMG + item.avatar}}" src="{{BASE_URL_IMG + item.avatar}}" onerror="this.src='images/no-photo-2.png';" alt="">
+            </div>
+            <div class="product-text">
+              <div>{{ item.name }}</div>
+              <div>{{ item.barcode }}</div>
+              <div>{{ item.category }}</div>
+            </div>
+            <div class="product-button">
+              <div class="product-button-delete" ng-click="deleteProduct(item)">
+                <span>{{ "PRODUCT_CATALOG_LBL_7" | translate }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+
+  <center>
+    <div class="little-shop-div-btn-payment" ng-if="storeProducts.length > 0">
+      <div class="catalog-button" ng-click="confirmProducts()">{{ "PRODUCT_CATALOG_LBL_5" | translate }}</div>
+    </div>
+  </center>
+
+  <md-button class="btn-back" ng-click="closeModalListStoreProduct()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+  <div class="toolbar-header-title">
+    <h3>{{ "PRODUCT_CATALOG_LBL_3" | translate }}</h3>
+  </div>
+
+</ion-modal-view>

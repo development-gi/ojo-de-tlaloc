@@ -1,0 +1,28 @@
+<ion-modal-view style="background-color: #000">
+
+  <div class="bar bar-header barras bar-light default-primary-color">
+
+    <button class="button button-icon icon" style="width: 50px!important;">
+      <md-button class="md-icon-button" style="margin: 0px" ng-click="closeModal()" aria-label="Settings">
+        <md-icon md-font-set="material-icons" style="color: #ffffff">&#xE5CD</md-icon>
+      </md-button>
+    </button>
+
+    <div class="title titulo-vista" style="color: #ffffff">Editar foto de perfil</div>
+
+    <button class="button button-icon icon" style="width: 50px!important;">
+      <md-button ng-click="save()" style="margin: 0px" class="md-icon-button " aria-label="Settings">
+        <md-icon md-font-set="material-icons" style="color: #ffffff">&#xE5CA</md-icon>
+      </md-button>
+    </button>
+
+  </div>
+
+  <ion-content style="width: 100%;height: 100%" scroll="false">
+    <div>
+      <canvas width="{{cropper.width}}" height="{{cropper.height}}" id="canvas" image-cropper image="cropper.sourceImage" cropped-image="cropper.croppedImage" crop-width="300" crop-height="300" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
+    </div>
+  </ion-content>
+
+
+</ion-modal-view>

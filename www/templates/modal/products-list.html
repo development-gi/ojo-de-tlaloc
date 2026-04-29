@@ -1,0 +1,35 @@
+<ion-modal-view class="background-white">
+
+  <ion-content class="products-list-content" scroll="true">
+
+    <div ng-if="searched_products.length > 0" class="product-list-container">
+      <div ng-repeat="item in searched_products" class="product-list-box">
+        <div class="product-box-image">
+          <img ng-src="{{BASE_URL_RELATIVE + item.avatar}}" src="{{BASE_URL_RELATIVE + item.avatar}}" onerror="this.src='images/no-photo.png'; this.width='30px;'">
+        </div>
+        <div class="product-box-info">
+          <h5>{{item.name}}</h5>
+          <h5 class="product-box-text product-box-price">{{ formatPrice(item.price) }}</h5>
+        </div>
+        <div class="product-box-button">
+          <div ng-class="{'disabled': isProductAdded(item)}" ng-click="addCart(item)" class="product-add-button">
+            <span ng-bind="getButtonText(item)"></span>
+            <img ng-hide="isProductAddedText(item)" src="images/icons/add.png"/>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+
+  </ion-content>
+
+  <md-button class="btn-back" ng-click="closeModalProductsList()" aria-label="Settings">
+    <img src="images/icons/arrow-down.png" class="toolbar-header-button-img"/>
+  </md-button>
+
+  <div class="toolbar-header-title">
+    <h3>{{ "PRODUCTS_LIST_LBL_1" | translate }}</h3>
+  </div>
+
+</ion-modal-view>

@@ -1,0 +1,53 @@
+<ion-view id="popupContainer">
+
+  <ion-content scroll="true" overflow-scroll="false" class="background-white">
+
+    <br>
+    <div class="logo-lb">
+      <img src="images/Large-logo.png" alt="Logo">
+    </div>
+    <br><br>
+    <div class="login-div">
+      <label class="title-lg">{{ "LOGIN_LBL_1" | translate }}</label>
+      <label>{{ "LOGIN_LBL_2" | translate }}</label>
+
+      <div class="login-form">
+        <label>Usuario</label>
+        <md-input-container class="md-block ip-login margin-top-5">
+          <input type="text" ng-model="dataLogin.user" class="border-color-base">
+        </md-input-container>
+        <br>
+
+        <label>Contraseña</label>
+        <md-input-container class="md-block ip-login margin-top-5">
+          <input id="input_password" type="password" ng-model="dataLogin.password" maxlength="10" aria-label="Iniciar sesion"  class="border-color-base">
+          <img src="images/icons/no-eye-purple.png"
+               ng-click="viewPassword()" id="visibility_password"
+               class="Form__ItemHelp Link Link--primary eye" data-action="toggle-recover-form">
+        </md-input-container>
+      </div>
+
+      <div class="login-btn">
+        <md-button ng-click="getLogin()" class="btn-star">
+          Ingresar
+        </md-button>
+        <br>
+        <md-button md-no-ink ng-click="forgotPass()">
+          <label class="subtitle-lg-gray">Recuperar contraseña.</label> <label class="subtitle-lg">Aquí</label>
+        </md-button>
+      </div>
+
+      <center><br>
+        <label style="color: grey;">------------- o -------------</label>
+        <div class="login-btn">
+          <md-button ng-click="getLoginMode()" class="btn-outline">
+            Ingresa en modo invitado
+          </md-button>
+        </div>
+      </center>
+
+    </div>
+
+   </ion-content>
+
+</ion-view>

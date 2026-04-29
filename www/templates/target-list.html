@@ -1,0 +1,101 @@
+<ion-view class="background-default">
+
+  <ion-content scroll="true" overflow-scroll="true" style="top: 57px;" keyboard-attach on-scroll="handleScroll()">
+
+    <div class="tlaloc-search">
+      <div class="search-pill">
+        <!-- Icono buscar -->
+        <md-icon class="material-icons search-icon">search</md-icon>
+        <!-- Input -->
+        <input type="text"
+               ng-model="search.text"
+               placeholder="Escriba el nombre de la lista"
+               class="search-input"
+               style="padding: 0 5px;">
+        <!-- Botón limpiar -->
+        <md-icon class="material-icons clear-icon"
+                 ng-if="search.text"
+                 ng-click="search.text = ''">
+          close
+        </md-icon>
+      </div>
+    </div>
+
+    <div layout="row" layout-wrap class="tlaloc-target">
+      <div flex="50"
+           ng-repeat="list in targets_data | filter:{ lib_name: search.text }">
+
+        <p class="target-name"
+           title="{{ list.lib_name }}">
+          {{ list.lib_name }}
+        </p>
+
+        <md-card class="target-card"
+                 ng-click="selectList(list)">
+
+          <md-card-content class="card-content">
+
+            <!-- Info izquierda -->
+            <div class="card-info">
+
+              <p class="card-type">
+                {{ list.lib_type == '1'
+                ? 'Lista de bloqueo'
+                : 'Lista de confianza' }}
+              </p>
+
+              <p class="card-alarm-label">
+                ¿Genera alarma?
+              </p>
+
+              <span class="alarm-badge"
+                    ng-class="list.lib_link_alarm == '1'
+                ? 'badge-success'
+                : 'badge-danger'">
+                {{ list.lib_link_alarm == '1' ? 'Sí' : 'No' }}
+              </span>
+
+            </div>
+
+            <!-- Umbral derecho -->
+            <div class="card-threshold">
+              <span class="threshold-label">Umbral</span>
+
+              <div class="threshold-bar">
+                <div class="threshold-fill"
+                     ng-style="getThresholdStyle(list.threshold)">
+                </div>
+              </div>
+
+              <span class="threshold-value">
+              {{ list.threshold }}%
+              </span>
+            </div>
+
+          </md-card-content>
+        </md-card>
+
+      </div>
+    </div>
+
+  </ion-content>
+
+  <md-toolbar class="tlaloc-header">
+    <div class="md-toolbar-tools">
+      <!-- Botón izquierdo -->
+      <md-button class="md-icon-button"
+                 ng-click="return()"
+                 aria-label="Menu">
+        <img src="images/new/arrow-left.svg" class="toolbar-icon">
+      </md-button>
+      <!-- Título -->
+      <h2 class="toolbar-title-modules">Lista de objetivos
+      </h2>
+    </div>
+  </md-toolbar>
+
+  <md-button class="md-fab tlaloc-fab" ng-class="{'fab-hide': !fabVisible}" ng-click="createList()" aria-label="Agregar">
+    <md-icon class="material-icons">add</md-icon>
+  </md-button>
+
+</ion-view>

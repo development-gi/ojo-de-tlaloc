@@ -1,0 +1,39 @@
+<div class="language-content">
+  <div align="center" class="margin-bottom-10">
+    <br>
+    <label class="titulo-modal font-weight-bold primary-text-color">{{ "TYPE_PAYMENT_LBL_1" | translate }}</label>
+  </div>
+  <br>
+  <div align="center" class="take-picture-div-table">
+    <table class="width-100-percentage">
+      <tr>
+        <td class="take-picture-icon">
+          <div align="bottom" ng-click="answer(1)">
+            <img src="images/icons/edit.png" width="45px">
+            <br/>
+            {{ "TYPE_PAYMENT_LBL_2" | translate }}
+          </div>
+        </td>
+        <td class="width-10-percentage"></td>
+        <td class="take-picture-icon">
+          <div align="bottom" ng-click="answer(2)">
+            <img src="images/icons/qr.png" width="45px">
+            <br/>
+            {{ "TYPE_PAYMENT_LBL_3" | translate }}
+          </div>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+  <br>
+
+  <div class="padding-15">
+    <div align="middle" class="div-boton-alert background-base-btn" ng-click="cancel()" >
+      <label class="button texto-boton background-base-btn take-picture-btn">
+        {{ "CANCEL" | translate }}
+      </label>
+    </div>
+  </div>
+
+</div>
